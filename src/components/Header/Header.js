@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div>
   <Navbar style={{backgroundColor: "black"}} variant="dark">
-    <Container>
+    <Container style={{}}>
     <Navbar.Brand style={{fontWeight: "bold"}} href="/home"><span className='yellow-text'>CAM</span> PAVILION</Navbar.Brand>
     <Nav className="ms-auto">
       <Nav.Link href="/home"><span className='yellow-text'>Home</span></Nav.Link>
