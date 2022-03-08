@@ -7,6 +7,7 @@ import Explore from './components/Explore/Explore';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Product from './components/Product/Product';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path='/product'>
         <Product></Product>
+        </Route>
+        <Route path='/register'>
+        <Register></Register>
         </Route>
         <Route path='/addproduct'>
         <AddProduct></AddProduct>
