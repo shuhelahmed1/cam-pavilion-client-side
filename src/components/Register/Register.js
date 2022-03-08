@@ -1,31 +1,18 @@
-import React, { useState } from 'react';
-import initializeAuthentication from '../Firebase/firebase.init';
 
-initializeAuthentication();
-
-
+import useFirebase from '../../hook/useFirebase';
+import './Register.css';
 const Register = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    
-    const handleEmail = e =>{
-        setEmail(e.target.value)
-    }
-    const handlePass = e =>{
-        setPassword(e.target.value)
-    }
-    const handleRegister = e=>{
-        e.preventDefault()
-        console.log(email,password)
-     
-    }
+    const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin} = useFirebase();
     return (
-        <div>
+        <div className='register-form-section mx-auto my-5'>
             <form onSubmit={handleRegister}>
-                <input onBlur={handleEmail} type="email" placeholder='email'/>
-                <input onBlur={handlePass} type="password" placeholder='pass'/>
-                <input type="submit" value='register'/>
+                <h2>{isLogin ? 'Login' : 'Register'} here: </h2>
+                <input className='d-block w-100 mb-2 mt-3' onBlur={handleEmail} type="email" placeholder='email'/>
+                <input className='d-block w-100 my-2' onBlur={handlePass} type="password" placeholder='password'/>
+                <input onChange={toggleLogin} type="checkbox" id='check1' placeholder='pass'/>
+                <label htmlFor='check1'>Already registerd?</label>
+                {/* <input type="submit" value='register'/> */}
+                <button type='submit'>{isLogin ? 'Login' : 'register'}</button>
                 </form>
         </div>
     );
