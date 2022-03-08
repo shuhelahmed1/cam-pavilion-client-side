@@ -1,0 +1,7 @@
+.products-section{
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+}
+.yellow-text{
+    color: #FFCB05;
+}
