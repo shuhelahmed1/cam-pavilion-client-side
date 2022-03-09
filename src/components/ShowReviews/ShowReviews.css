@@ -1,0 +1,5 @@
+.reviews-section{
+    grid-template-columns: repeat(2,1fr);
+    width: 80%;
+    grid-gap: 20px;
+}

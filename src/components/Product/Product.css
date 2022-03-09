@@ -1,7 +1,7 @@
 .product-card{
     box-shadow: 1px 1px 4px 1px grey;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .product-card p{
     text-align: justify;
