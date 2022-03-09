@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Explore from '../Explore/Explore';
 import Product from '../Product/Product';
 import './Products.css';
 
@@ -16,7 +15,7 @@ const Products = () => {
             <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
             <div className='products-section mx-auto d-grid'>
                 {
-                    products.slice(0,6).map(product=> <Product key={product.id} product={product}></Product>)
+                    products.slice(0,6).map(product=> <Product key={product._id} product={product}></Product>)
                 }
             </div>
         </div>
