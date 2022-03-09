@@ -1,0 +1,31 @@
+.about-us-section{
+    background-color: rgba(226, 222, 11, 0.123);
+}
+.about-us-container{
+    width: 80%;
+}
+.ceo-img{
+    width: 40%;
+}
+.ceo-speech{
+    width: 40%;
+}
+
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .about-us-container{
+        width: 90%;
+        flex-direction: column;
+    }
+    .about-us-container p{
+        text-align: justify;
+    }
+    .ceo-img{
+        width: 100%;
+    }
+    .ceo-speech{
+        width: 100%;
+    }
+}

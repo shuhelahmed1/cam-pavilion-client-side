@@ -3,3 +3,15 @@
     width: 80%;
     grid-gap: 20px;
 }
+
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .reviews-section{
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+        grid-gap: 20px;
+    }
+    
+}

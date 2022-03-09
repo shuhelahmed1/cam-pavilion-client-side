@@ -8,9 +8,11 @@ const Header = () => {
   const {user, logOut} = useFirebase();
     return (
         <div>
-  <Navbar style={{backgroundColor: "black"}} variant="dark">
-    <Container style={{}}>
+  <Navbar expand="md" collapseOnSelect style={{backgroundColor: "black"}} variant="dark">
+    <Container>
     <Navbar.Brand style={{fontWeight: "bold"}} href="/home"><span className='yellow-text'>CAM</span> PAVILION</Navbar.Brand>
+    <Navbar.Toggle/>
+    <Navbar.Collapse>
     <Nav className="ms-auto">
       <Nav.Link as={Link} to="/home"><span className='yellow-text'>Home</span></Nav.Link>
       <Nav.Link as={Link} to="/addproduct"><span className='yellow-text'>Add Product</span></Nav.Link>
@@ -33,6 +35,7 @@ const Header = () => {
       
       
     </Nav>
+    </Navbar.Collapse>
     </Container>
   </Navbar>
         </div>

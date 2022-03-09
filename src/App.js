@@ -6,8 +6,10 @@ import AddProduct from './components/AddProduct/AddProduct';
 import Explore from './components/Explore/Explore';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import MyOrders from './components/MyOrders/MyOrders';
+import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Payment/Payment';
-import Product from './components/Product/Product';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import Purchase from './components/Purchase/Purchase';
 import Register from './components/Register/Register';
 import Review from './components/Review/Review';
@@ -27,8 +29,11 @@ function App() {
         <Route path='/explore'>
         <Explore></Explore>
         </Route>
-        <Route path='/product'>
+        {/* <Route path='/product'>
         <Product></Product>
+        </Route> */}
+        <Route path='/myorders'>
+          <MyOrders></MyOrders>
         </Route>
         <Route path='/payment'>
         <Payment></Payment>
@@ -39,11 +44,17 @@ function App() {
         <Route path='/register'>
         <Register></Register>
         </Route>
-        <Route path="/products/:id">
+        <Route path='/products/purchase/placeorder'>
+         <PlaceOrder></PlaceOrder>
+       </Route>
+        <Route path='/products/purchase/:id'>
          <Purchase></Purchase>
        </Route>
         <Route path='/addproduct'>
         <AddProduct></AddProduct>
+        </Route>
+        <Route path='**'>
+        <NotFound></NotFound>
         </Route>
       </Switch>
       </BrowserRouter>

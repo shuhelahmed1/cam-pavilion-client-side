@@ -6,3 +6,14 @@
 .yellow-text{
     color: #FFCB05;
 }
+
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .products-section{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}

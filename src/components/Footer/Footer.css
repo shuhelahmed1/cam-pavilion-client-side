@@ -1,0 +1,9 @@
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .footer-container{
+        width: 90%;
+    }
+    
+}

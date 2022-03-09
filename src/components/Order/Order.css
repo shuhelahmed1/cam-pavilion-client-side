@@ -1,0 +1,5 @@
+.order-container{
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid gray;
+    grid-gap: 5px;
+}

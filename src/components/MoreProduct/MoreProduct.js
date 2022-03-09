@@ -5,10 +5,11 @@ import './MoreProduct.css';
 const MoreProduct = ({moreproduct}) => {
     return (
         <div className='moreProductCard'>
-            <img className='w-100' src={moreproduct.imgUrl} alt="" />
-            <h4>{moreproduct.name}</h4>
-            <p>{moreproduct.des}</p>
-            <Link to={`/products/${moreproduct._id}`}>Purchase</Link>
+            <img className='w-75 d-block mx-auto' src={moreproduct.imgUrl} alt="" />
+            <hr />
+            <h6 style={{fontSize: '12px'}}>{moreproduct.name}</h6>
+            <p style={{fontSize: '10px'}}>{moreproduct.des}</p>
+            <Link to={`/products/purchase/${moreproduct._id}`}>Purchase</Link>
         </div>
     );
 };

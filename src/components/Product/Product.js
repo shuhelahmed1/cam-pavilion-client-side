@@ -5,9 +5,10 @@ const Product = ({product}) => {
     return (
         <div className='product-card'>
             <img className='w-75 d-block mx-auto' src={product.imgUrl} alt="" />
-            <h6>{product.name}</h6>
-            <p style={{fontSize: '12px'}}>{product.des}</p>
-            <Link to={`/products/${product._id}`}>Purchase</Link>
+            <hr />
+            <h6 style={{fontSize: '12px'}}>{product.name}</h6>
+            <p style={{fontSize: '10px'}}>{product.des}</p>
+            <Link to={`/products/purchase/${product._id}`}>Purchase</Link>
         </div>
     );
 };
