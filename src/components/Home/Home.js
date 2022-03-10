@@ -14,7 +14,7 @@ const Home = () => {
                       <Carousel fade>
             <Carousel.Item>
               <img
-                className="d-block w-100" style={{height: '360px'}}
+                className="d-block w-100" style={{height: '500px'}}
                 src="https://img.freepik.com/free-photo/professional-camera-blurred-background-with-laptop_169016-10676.jpg?size=626&ext=jpg"
                 alt="First slide"
               />
@@ -25,7 +25,7 @@ const Home = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100" style={{height: '360px'}}
+                className="d-block w-100" style={{height: '500px'}}
                 src="https://img.freepik.com/free-photo/flat-lay-camera-black-background-with-copy-space_23-2148363419.jpg?size=626&ext=jpg"
                 alt="Second slide"
               />
@@ -37,7 +37,7 @@ const Home = () => {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100" style={{height: '360px'}}
+                className="d-block w-100" style={{height: '500px'}}
                 src="https://img.freepik.com/free-photo/flat-lay-photography-concept-black-background_23-2148363432.jpg?size=626&ext=jpg"
                 alt="Third slide"
               />
