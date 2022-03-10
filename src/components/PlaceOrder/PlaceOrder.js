@@ -35,7 +35,7 @@ const PlaceOrder = () => {
                 <h5 className='text-center mt-3'>Please Provide Your Information</h5>
                 <hr />
                 {/* <p>Product Id: <input className='w-100' type="text" ref={idRef} value={purchase._id}/></p> */}
-                <p>Name: <input className='w-100' type="text" ref={nameRef} value={user.name}/></p>
+                <p>Name: <input className='w-100' type="text" ref={nameRef} value={user.diplayname}/></p>
                 <p>Email: <input className='w-100' type="email" ref={emailRef} value={user.email}/></p>
                 <p>Address: <input className='w-100' ref={addressRef} type="text"/></p>
                 <p>Phone: <input className='w-100' ref={phoneRef} type="number" /></p>

@@ -7,7 +7,7 @@ const useFirebase = () =>{
     const auth = getAuth();
     const [user, setUser] = useState({});
     const [email, setEmail] = useState('');
-    const [displayName, setdisplayName] = useState('');
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
 
@@ -15,7 +15,7 @@ const useFirebase = () =>{
         setIsLogin(e.target.checked)
     }
     const handleName = e =>{
-        setdisplayName(e.target.value)
+        setName(e.target.value)
     }
     const handleEmail = e =>{
         setEmail(e.target.value)
@@ -37,8 +37,10 @@ const useFirebase = () =>{
     const registerNewUser = (email, password) =>{
         createUserWithEmailAndPassword(auth, email,password)
         .then((result)=>{
-            setUser(result.user);
-            console.log(user)
+            const newUser = {email, displayName: name}
+            setUser(newUser)
+            // save user to the database
+            saveUser(email,name,'POST')
         })
     }
     const processLogin = (email, password) =>{
@@ -53,7 +55,9 @@ const useFirebase = () =>{
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
         .then(result =>{
+            const user = result.user;
             setUser(result.user);
+            saveUser(user.email, user.displayName,'PUT')
         })
     }
 
@@ -77,6 +81,21 @@ const useFirebase = () =>{
         });
         return ()=> unsubscribed;
     },[])
+
+    const saveUser = (email, displayName,method) =>{
+        const user = {email, displayName}
+        fetch('https://morning-refuge-64241.herokuapp.com/users',{
+            method: method,
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            alert('user info saved')
+        })
+    }
     return{
         handleRegister,
         isLogin,

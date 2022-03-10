@@ -32,7 +32,7 @@ const AddProduct = () => {
                 <input className='d-block w-100 my-2' type="text" ref={imgRef} placeholder='Img url'/>
                 <input className='d-block w-100' type="text" ref={nameRef} placeholder='product name'/>
                 <input className='d-block w-100 my-2' type="text" ref={desRef} placeholder='product description'/>
-                <input className='bg-warning' type="submit" value="Submit" />
+                <input className='common-button' type="submit" value="Submit" />
                 </form>
         </div>
     );

@@ -5,20 +5,21 @@ const Register = () => {
     const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn} = useAuth();
     return (
         <div className='register-form-section mx-auto my-5'>
-            <form onSubmit={handleRegister}>
-                <h2>{isLogin ? 'Login' : 'Register'} here: </h2>
+            <h2>{isLogin ? 'Login' : 'Register'} Here: </h2>
+            <form className='w-100' onSubmit={handleRegister}>
                 <input className='d-block w-100 mb-2 mt-3' onBlur={handleName} type="text" placeholder='Name'/>
                 <input className='d-block w-100 my-2' onBlur={handleEmail} type="email" placeholder='Email'/>
                 <input className='d-block w-100 my-2' onBlur={handlePass} type="password" placeholder='Password'/>
                 <input onChange={toggleLogin} type="checkbox" id='check1' placeholder='pass'/>
                 <label htmlFor='check1'>Already registerd?</label>
                 {/* <input type="submit" value='register'/> */}
-                <button type='submit'>{isLogin ? 'Login' : 'register'}</button>
+                <button className='common-button ms-1' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
                 </form>
-                <br />
+       
                 <hr />
-                <br />
-                <button onClick={handleGoogleLogIn}>Login using Google</button>
+                <div>
+                <button className='common-button mx-auto d-block' onClick={handleGoogleLogIn}>Login Using Google</button>
+                </div>
         </div>
     );
 };

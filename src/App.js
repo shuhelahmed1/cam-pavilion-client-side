@@ -6,6 +6,7 @@ import AddProduct from './components/AddProduct/AddProduct';
 import Explore from './components/Explore/Explore';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Payment/Payment';
@@ -55,6 +56,9 @@ function App() {
        </PrivateRoute>
         <Route path='/addproduct'>
         <AddProduct></AddProduct>
+        </Route>
+        <Route path='/makeadmin'>
+          <MakeAdmin></MakeAdmin>
         </Route>
         <Route path='**'>
         <NotFound></NotFound>

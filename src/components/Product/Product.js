@@ -6,8 +6,8 @@ const Product = ({product}) => {
         <div className='product-card'>
             <img className='w-75 d-block mx-auto' src={product.imgUrl} alt="" />
             <hr />
-            <h6 style={{fontSize: '12px'}}>{product.name}</h6>
-            <p style={{fontSize: '10px'}}>{product.des}</p>
+            <h6 style={{fontSize: '13px'}}>{product.name}</h6>
+            <p style={{fontSize: '11px'}}>{product.des}</p>
             <Link to={`/products/purchase/${product._id}`}>Purchase</Link>
         </div>
     );

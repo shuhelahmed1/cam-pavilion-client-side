@@ -2,3 +2,13 @@
     width: 80%;
     margin: 0 auto;
 }
+.common-button{
+    background-color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.common-button:hover{
+    background-color: black;
+    color: white;
+}

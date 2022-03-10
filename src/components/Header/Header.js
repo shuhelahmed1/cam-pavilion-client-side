@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Products/Products.css';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hook/useAuth';
+import './header.css';
 
 const Header = () => {
   const {user, logOut} = useAuth();
@@ -27,11 +27,17 @@ const Header = () => {
         
         <NavDropdown.Divider />
         {
-        user.email && <Button onClick={logOut}>Logout</Button>
+        user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
       }
       </NavDropdown>
       }
-      
+      <NavDropdown title="Admin Panel" id="nav-dropdown">
+        <Nav.Link as={Link} to='/makeadmin' style={{color: "black"}}>Make Admin</Nav.Link>
+        <NavDropdown.Divider />
+        {
+        user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
+      }
+      </NavDropdown>
       
       
     </Nav>
