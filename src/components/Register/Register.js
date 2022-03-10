@@ -1,8 +1,8 @@
 
-import useFirebase from '../../hook/useFirebase';
+import useAuth from '../../hook/useAuth';
 import './Register.css';
 const Register = () => {
-    const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn} = useFirebase();
+    const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn} = useAuth();
     return (
         <div className='register-form-section mx-auto my-5'>
             <form onSubmit={handleRegister}>

@@ -1,19 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import Order from '../Order/Order';
 import './MyOrders.css';
+import useAuth from '../../hook/useAuth';
 
 const MyOrders = () => {
     const [orders,setOrders] = useState([])
+    const {user} = useAuth();
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch(`https://morning-refuge-64241.herokuapp.com/orders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=> setOrders(data))
-    },[])
+    },[user.email])
+
+     // delete an order
+     const handleDeleteOrder = id =>{
+        const confirm = window.confirm('Are you sure to cancel the order.');
+        if(confirm){
+            const url = `https://morning-refuge-64241.herokuapp.com/orders/${id}`;
+        fetch(url , {
+            method: 'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.deletedCount){
+                alert('Successfully cancelled the order.');
+                const remainingOrders = orders.filter(order => order._id !== id)
+                setOrders(remainingOrders)
+            }
+        })
+        }
+    }
     return (
         <div className='w-75 mx-auto'>
             <h2>MY ORDERS</h2>
             {
-                orders.map(order=><Order key={order._id} order={order}></Order>)
+                orders.map(order=><li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
             }
         </div>
     );

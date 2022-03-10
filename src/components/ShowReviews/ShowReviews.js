@@ -5,7 +5,7 @@ import './ShowReviews.css';
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('https://morning-refuge-64241.herokuapp.com/review')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])

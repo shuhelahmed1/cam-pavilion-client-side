@@ -11,7 +11,7 @@ const AddProduct = () => {
         const name = nameRef.current.value;
         const des = desRef.current.value;
         const newProduct = {imgUrl,name,des};
-        fetch('http://localhost:5000/products', {
+        fetch('https://morning-refuge-64241.herokuapp.com/products', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json' 

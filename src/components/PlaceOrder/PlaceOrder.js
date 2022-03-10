@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useFirebase from '../../hook/useFirebase';
+import useAuth from '../../hook/useAuth';
 
 const PlaceOrder = () => {
     // const idRef = useRef();
@@ -7,7 +7,7 @@ const PlaceOrder = () => {
     const emailRef = useRef();
     const addressRef = useRef();
     const phoneRef = useRef();
-    const {user} = useFirebase();
+    const {user} = useAuth();
     const hanndlePurchase = e =>{
         e.preventDefault();
         // const id = idRef.current.value;
@@ -16,7 +16,7 @@ const PlaceOrder = () => {
         const address = addressRef.current.value;
         const phone = phoneRef.current.value;
         const newOrder = {name,email,address,phone}
-        fetch('http://localhost:5000/orders',{
+        fetch('https://morning-refuge-64241.herokuapp.com/orders',{
             method:"POST",
             headers:{
                 'content-type': 'application/json' 

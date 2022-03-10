@@ -6,7 +6,7 @@ import '../Products/Products.css';
 const Explore = () => {
     const [moreProducts, setMoreProducuts] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://morning-refuge-64241.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setMoreProducuts(data))
     },[])

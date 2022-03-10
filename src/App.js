@@ -10,13 +10,16 @@ import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Payment/Payment';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Purchase from './components/Purchase/Purchase';
 import Register from './components/Register/Register';
 import Review from './components/Review/Review';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <BrowserRouter>
       <Header></Header>
       <Switch>
@@ -47,9 +50,9 @@ function App() {
         <Route path='/products/purchase/placeorder'>
          <PlaceOrder></PlaceOrder>
        </Route>
-        <Route path='/products/purchase/:id'>
+        <PrivateRoute path='/products/purchase/:id'>
          <Purchase></Purchase>
-       </Route>
+       </PrivateRoute>
         <Route path='/addproduct'>
         <AddProduct></AddProduct>
         </Route>
@@ -58,7 +61,7 @@ function App() {
         </Route>
       </Switch>
       </BrowserRouter>
-      
+      </AuthProvider>
     </div>
   );
 }

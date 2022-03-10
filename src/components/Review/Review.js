@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import useFirebase from '../../hook/useFirebase';
+import useAuth from '../../hook/useAuth';
 
 const Review = () => {
-    const {user} = useFirebase();
+    const {user} = useAuth();
     const reviewRef = useRef();
     const nameRef = useRef();
     const addReview = e =>{
@@ -10,7 +10,7 @@ const Review = () => {
         const review = reviewRef.current.value;
         const name = nameRef.current.value;
         const newReview = {review, name};
-        fetch('http://localhost:5000/review',{
+        fetch('https://morning-refuge-64241.herokuapp.com/review',{
             method: "POST",
             headers:{
                 'content-type':'application/json'
