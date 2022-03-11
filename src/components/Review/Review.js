@@ -32,8 +32,8 @@ const Review = () => {
                 <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
                 <textarea className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
-                <input className='bg-warning' type="submit" value="Submit" />
-                    </form>
+                <button className='common-button' type="submit">Submit</button>
+                </form>
             </div>
         </div>
     );

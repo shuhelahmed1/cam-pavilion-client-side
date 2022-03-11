@@ -37,7 +37,6 @@ const Header = () => {
         <Nav.Link as={Link} to='/manageorders' style={{color: "black"}}>Manage Orders</Nav.Link>
         <Nav.Link as={Link} to='/manageproducts' style={{color: "black"}}>Manage Products</Nav.Link>
         <NavDropdown.Divider />
-        <NavDropdown.Divider />
         {
         user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
       }
