@@ -27,8 +27,8 @@ const AddProduct = () => {
 
     return (
         <div className='addProductSection my-5'>
-            <h2 className='text-center'>Add a Product</h2>
-            <form onSubmit={handleAddProduct}>
+            <h2 style={{fontWeight: 'bold'}}>Add a Product</h2>
+            <form className='cam-pavilion-form' onSubmit={handleAddProduct}>
                 <input className='d-block w-100 my-2' type="text" ref={imgRef} placeholder='Img url'/>
                 <input className='d-block w-100' type="text" ref={nameRef} placeholder='product name'/>
                 <input className='d-block w-100 my-2' type="text" ref={desRef} placeholder='product description'/>

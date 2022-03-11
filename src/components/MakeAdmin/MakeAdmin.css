@@ -8,3 +8,7 @@
     background-color: black;
     color: white;
 }
+.create-admin-form-container{
+    width: 80%;
+    margin: 0 auto;
+}

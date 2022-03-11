@@ -22,12 +22,14 @@ const MakeAdmin = () => {
         })
     }
     return (
-        <div>
-            <h2 className='text-center mt-3' style={{fontWeight: 'bold'}}>CREATE AN ADMIN</h2>
-            <form onSubmit={handleAdminSubmit}>
+        <div className='create-admin-form-container'>
+            <h2 className='mt-5' style={{fontWeight: 'bold'}}>Create an Admin</h2>
+            <div>
+                <form className='cam-pavilion-form' onSubmit={handleAdminSubmit}>
                 <input onBlur={handleEmail} type="email" placeholder='Enter email'/>
-                <button className='common-button' type='submit'>Create</button>
+                <button className='common-button ms-2' type='submit'>Create</button>
                 </form>
+            </div>
         </div>
     );
 };

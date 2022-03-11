@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useAuth from '../../hook/useAuth';
+import './Review.css';
 
 const Review = () => {
     const {user} = useAuth();
@@ -27,8 +28,8 @@ const Review = () => {
     return (
         <div>
             <div className='w-75 mx-auto mt-5'>
-                <h2>Please provide a review: </h2>
-                <form onSubmit={addReview}>
+                <h2 style={{fontWeight: 'bold'}}>Please Provide a Review </h2>
+                <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
                 <textarea className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
                 <input className='bg-warning' type="submit" value="Submit" />

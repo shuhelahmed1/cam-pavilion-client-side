@@ -93,7 +93,7 @@ const useFirebase = () =>{
         })
         .then(res=>res.json())
         .then(data=>{
-            alert('user info saved')
+            
         })
     }
     return{

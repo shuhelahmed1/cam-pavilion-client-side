@@ -4,9 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AddProduct from './components/AddProduct/AddProduct';
 import Explore from './components/Explore/Explore';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
+import MapDirection from './components/MapDirection/MapDirection';
 import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Payment/Payment';
@@ -64,6 +66,8 @@ function App() {
         <NotFound></NotFound>
         </Route>
       </Switch>
+      <MapDirection></MapDirection>
+      <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>
     </div>

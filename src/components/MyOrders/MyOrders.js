@@ -31,7 +31,7 @@ const MyOrders = () => {
     }
     return (
         <div className='w-75 mx-auto'>
-            <h2>MY ORDERS</h2>
+            <h2 className='mt-5' style={{fontWeight: 'bold'}}>My Orders</h2>
             {
                 orders.map(order=><li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
             }

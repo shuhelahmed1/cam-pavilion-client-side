@@ -69,9 +69,7 @@ const Home = () => {
 
             {/* review section */}
             <ShowReviews></ShowReviews>
-
-            {/* footer section */}
-            <Footer></Footer>
+            
         </div>
     );
 };

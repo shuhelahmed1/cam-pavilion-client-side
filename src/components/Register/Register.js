@@ -1,12 +1,11 @@
-
 import useAuth from '../../hook/useAuth';
 import './Register.css';
 const Register = () => {
     const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn} = useAuth();
     return (
         <div className='register-form-section mx-auto my-5'>
-            <h2>{isLogin ? 'Login' : 'Register'} Here: </h2>
-            <form className='w-100' onSubmit={handleRegister}>
+            <h2 style={{fontWeight: 'bold'}}>{isLogin ? 'Login' : 'Register'} Here: </h2>
+            <form className='cam-pavilion-form w-100' onSubmit={handleRegister}>
                 <input className='d-block w-100 mb-2 mt-3' onBlur={handleName} type="text" placeholder='Name'/>
                 <input className='d-block w-100 my-2' onBlur={handleEmail} type="email" placeholder='Email'/>
                 <input className='d-block w-100 my-2' onBlur={handlePass} type="password" placeholder='Password'/>
