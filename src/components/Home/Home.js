@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import Footer from '../Footer/Footer';
 import Products from '../Products/Products';
 import ShowReviews from '../ShowReviews/ShowReviews';
 import './Home.css';

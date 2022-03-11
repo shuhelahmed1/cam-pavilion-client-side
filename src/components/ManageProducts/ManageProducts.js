@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Payment = () => {
+const ManageProducts = () => {
     return (
         <div>
             <h4 className='text-center mt-4'>Coding is in progress...</h4>
@@ -8,4 +8,4 @@ const Payment = () => {
     );
 };
 
-export default Payment;
+export default ManageProducts;

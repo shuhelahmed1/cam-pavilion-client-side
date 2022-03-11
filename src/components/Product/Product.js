@@ -4,10 +4,10 @@ import './Product.css';
 const Product = ({product}) => {
     return (
         <div className='product-card'>
-            <img className='w-75 d-block mx-auto' src={product.imgUrl} alt="" />
+            <img className='d-block mx-auto' src={product.imgUrl} alt="" />
             <hr />
-            <h6 style={{fontSize: '11px'}}>{product.name}</h6>
-            <p style={{fontSize: '11px'}}>{product.des}</p>
+            <h6>{product.name}</h6>
+            <p>{product.des}</p>
             <Link to={`/products/purchase/${product._id}`}>Purchase</Link>
         </div>
     );

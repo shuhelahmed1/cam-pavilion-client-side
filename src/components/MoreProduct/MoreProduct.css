@@ -3,7 +3,12 @@
     padding: 10px;
     border-radius: 5px;
 }
-.moreProductCard p{
+.moreProductCard img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.moreProductCard h6,p{
     text-align: justify;
-    font-size: 14px;
+    font-size: 12px;
 }

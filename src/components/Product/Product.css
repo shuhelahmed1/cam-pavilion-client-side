@@ -3,7 +3,10 @@
     padding: 10px;
     border-radius: 5px;
 }
-.product-card p{
+.product-card img{
+    width: 50%;
+}
+.product-card h6,p{
     text-align: justify;
-    font-size: 14px;
+    font-size: 12px;
 }

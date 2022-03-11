@@ -10,6 +10,7 @@ const useFirebase = () =>{
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
+    const [admin, setAdmin] = useState(false)
 
     const toggleLogin = e =>{
         setIsLogin(e.target.checked)
@@ -47,7 +48,6 @@ const useFirebase = () =>{
         signInWithEmailAndPassword(auth, email,password)
         .then((result)=>{
             setUser(result.user);
-            console.log(user)
         })
     }
 
@@ -60,6 +60,8 @@ const useFirebase = () =>{
             saveUser(user.email, user.displayName,'PUT')
         })
     }
+
+    
 
     const logOut = ( ) =>{
         signOut(auth)
@@ -96,6 +98,13 @@ const useFirebase = () =>{
             
         })
     }
+
+    useEffect(()=>{
+        fetch(`https://morning-refuge-64241.herokuapp.com/users/${user.email}`)
+        .then(res=>res.json())
+        .then(data=> setAdmin(data.admin))
+    },[user.email])
+
     return{
         handleRegister,
         isLogin,
@@ -103,6 +112,7 @@ const useFirebase = () =>{
         handlePass,
         toggleLogin,
         user,
+        admin,
         logOut,
         handleName,
         handleGoogleLogIn

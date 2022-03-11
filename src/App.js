@@ -8,6 +8,8 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
+import ManagaOrders from './components/ManageOrders/ManagaOrders';
+import ManageProducts from './components/ManageProducts/ManageProducts';
 import MapDirection from './components/MapDirection/MapDirection';
 import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
@@ -58,6 +60,12 @@ function App() {
        </PrivateRoute>
         <Route path='/addproduct'>
         <AddProduct></AddProduct>
+        </Route>
+        <Route path='/manageorders'>
+        <ManagaOrders></ManagaOrders>
+        </Route>
+        <Route path='/manageproducts'>
+        <ManageProducts></ManageProducts>
         </Route>
         <Route path='/makeadmin'>
           <MakeAdmin></MakeAdmin>

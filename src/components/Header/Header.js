@@ -5,7 +5,7 @@ import useAuth from '../../hook/useAuth';
 import './header.css';
 
 const Header = () => {
-  const {user, logOut} = useAuth();
+  const {user, logOut, admin} = useAuth();
     return (
         <div>
   <Navbar expand="md" collapseOnSelect style={{backgroundColor: "black"}} variant="dark">
@@ -15,8 +15,6 @@ const Header = () => {
     <Navbar.Collapse>
     <Nav className="ms-auto">
       <Nav.Link as={Link} to="/home"><span className='yellow-text'>Home</span></Nav.Link>
-      <Nav.Link as={Link} to="/addproduct"><span className='yellow-text'>Add Product</span></Nav.Link>
-      
       <Nav.Link as={Link} to="/register"><span className='yellow-text'>Register</span></Nav.Link>
       <Nav.Link as={Link} to="/explore"><span className='yellow-text'>Explore</span></Nav.Link>
       {
@@ -31,13 +29,24 @@ const Header = () => {
       }
       </NavDropdown>
       }
-      <NavDropdown title="Admin Panel" id="nav-dropdown">
+
+      {
+        admin && <NavDropdown title="Admin Panel" id="nav-dropdown">
         <Nav.Link as={Link} to='/makeadmin' style={{color: "black"}}>Make Admin</Nav.Link>
+        <Nav.Link as={Link} to='/addproduct' style={{color: "black"}}>Add Product</Nav.Link>
+        <Nav.Link as={Link} to='/manageorders' style={{color: "black"}}>Manage Orders</Nav.Link>
+        <Nav.Link as={Link} to='/manageproducts' style={{color: "black"}}>Manage Products</Nav.Link>
+        <NavDropdown.Divider />
         <NavDropdown.Divider />
         {
         user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
       }
       </NavDropdown>
+      }
+     
+     
+     
+      
       
       
     </Nav>
