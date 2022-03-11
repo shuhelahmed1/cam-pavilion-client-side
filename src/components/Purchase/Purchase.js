@@ -15,9 +15,9 @@ const Purchase = () => {
     
     return (
         <>
-        <h2 className='text-center mt-3'>DETAILED INFORMATION</h2>
-        <div className='w-50 mx-auto border p-3'>
-            <img className='w-50' src={purchase.imgUrl} alt="" />
+        <h2 className='text-center mt-3'>Detailed Information</h2>
+        <div className='w-75 mx-auto border p-3 mb-3'>
+            <img className='w-25' src={purchase.imgUrl} alt="" />
             <h4>{purchase.name}</h4>
             <p>{purchase.des}</p>
             <Link to='/products/purchase/placeorder'>Place Order</Link>

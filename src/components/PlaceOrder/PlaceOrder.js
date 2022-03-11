@@ -30,16 +30,15 @@ const PlaceOrder = () => {
         })
     }
     return (
-        <div className='w-75 mx-auto'>
-            <form onSubmit={hanndlePurchase}>
-                <h5 className='text-center mt-3'>Please Provide Your Information</h5>
-                <hr />
+        <div className='w-75 mx-auto my-3'>
+            <h5 className='text-center mt-4'>Please Provide Your Information</h5>
+            <form className='cam-pavilion-form' onSubmit={hanndlePurchase}>
                 {/* <p>Product Id: <input className='w-100' type="text" ref={idRef} value={purchase._id}/></p> */}
                 <p>Name: <input className='w-100' type="text" ref={nameRef} value={user.diplayname}/></p>
                 <p>Email: <input className='w-100' type="email" ref={emailRef} value={user.email}/></p>
                 <p>Address: <input className='w-100' ref={addressRef} type="text"/></p>
                 <p>Phone: <input className='w-100' ref={phoneRef} type="number" /></p>
-                <input type="submit" value='purchase'/>
+                <button className='common-button' type="submit">Purchase</button>
             </form>
         </div>
     );

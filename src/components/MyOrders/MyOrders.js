@@ -30,10 +30,10 @@ const MyOrders = () => {
         }
     }
     return (
-        <div className='w-75 mx-auto'>
-            <h2 className='mt-5' style={{fontWeight: 'bold'}}>My Orders</h2>
+        <div className='w-75 mx-auto my-4'>
+            <h2 style={{fontWeight: 'bold'}}>My Orders</h2>
             {
-                orders.map(order=><li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
+                orders.map(order=><li key={order._id}>{order.name} - {order.email} - {order.address} - {order.phone} -Id: {order._id} <button className='common-button' onClick={()=>handleDeleteOrder(order._id)}>Cancel</button></li>)
             }
         </div>
     );
