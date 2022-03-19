@@ -1,3 +1,20 @@
+.create-admin-form-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.create-admin-form-container input{
+    display: block;
+    width: 50%;
+    margin: 0 auto 10px;
+}
+
+.create-admin-form-container button{
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+}
+
 .common-button{
     background-color: white;
     font-weight: bold;
@@ -8,7 +25,22 @@
     background-color: black;
     color: white;
 }
-.create-admin-form-container{
-    width: 80%;
-    margin: 0 auto;
+
+/* css media query for responsiveness */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+
+    .create-admin-form-container{
+        width: 90%;
+    }
+    
+    .create-admin-form-container input{
+        width: 90%;
+    }
+    
+    .create-admin-form-container button{
+        width: 50%;
+    }
+    
 }
