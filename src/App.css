@@ -1,13 +1,1 @@
-.map-container{
-    position: relative;
-    width: 80%;
-    height: 350px;
-    margin: 50px auto;
-}
-#map{ 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-}
 

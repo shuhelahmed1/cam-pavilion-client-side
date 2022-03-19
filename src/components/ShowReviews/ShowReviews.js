@@ -14,7 +14,7 @@ const ShowReviews = () => {
             <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>CUSTOMER <span className='yellow-text'>REVIEWS</span></h2>
             <div className='reviews-section d-grid mx-auto mb-2'>
             {
-                reviews.slice(0,4).map(review=> <ShowReview key={review._id} review={review}></ShowReview>)
+                reviews.map(review=> <ShowReview key={review._id} review={review}></ShowReview>)
             }
             </div>
         </div>

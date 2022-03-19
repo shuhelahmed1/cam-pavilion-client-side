@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import useAuth from '../../hook/useAuth';
 import './Review.css';
 
@@ -6,11 +6,18 @@ const Review = () => {
     const {user} = useAuth();
     const reviewRef = useRef();
     const nameRef = useRef();
+    const ratingRef = useRef();
+    const [error, setError] = useState('')
     const addReview = e =>{
         e.preventDefault();
         const review = reviewRef.current.value;
         const name = nameRef.current.value;
-        const newReview = {review, name};
+        const rating = ratingRef.current.value;
+        if(rating>5 || rating <= 0){
+            setError('Please provide rating between 1-5 numbers')
+            return;
+        }
+        const newReview = {review, name, rating};
         fetch('https://morning-refuge-64241.herokuapp.com/review',{
             method: "POST",
             headers:{
@@ -20,6 +27,7 @@ const Review = () => {
         })
         .then(res=>res.json())
         .then(result=>{
+            setError('')
             alert('Successfully review added')
             e.target.reset();
         })
@@ -32,8 +40,10 @@ const Review = () => {
                 <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
                 <textarea required className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
+                <input className='d-block w-100 mb-2' type="number" ref={ratingRef} placeholder='Your rating (Please enter number between 1-5)'/>
                 <button className='common-button' type="submit">Submit</button>
                 </form>
+                <h5 className='text-danger'>{error}</h5>
             </div>
         </div>
     );

@@ -71,7 +71,7 @@ function App() {
         <NotFound></NotFound>
         </Route>
       </Switch>
-      <MapDirection></MapDirection>
+      {/* <MapDirection></MapDirection> */}
       <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>

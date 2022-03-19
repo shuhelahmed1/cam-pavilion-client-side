@@ -4,7 +4,6 @@ import Products from '../Products/Products';
 import ShowReviews from '../ShowReviews/ShowReviews';
 import './Home.css';
 
-
 const Home = () => {
     return (
         <div>
