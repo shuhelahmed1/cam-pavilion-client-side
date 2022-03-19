@@ -10,9 +10,9 @@ const Register = () => {
                 <input className='d-block w-100 my-2' onBlur={handleEmail} type="email" placeholder='Email'/>
                 <input className='d-block w-100 my-2' onBlur={handlePass} type="password" placeholder='Password'/>
                 <input onChange={toggleLogin} type="checkbox" id='check1' placeholder='pass'/>
-                <label htmlFor='check1'>Already registerd?</label>
+                <label htmlFor='check1' className='mx-2'>Already registered?</label>
                 {/* <input type="submit" value='register'/> */}
-                <button className='common-button ms-1' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
+                <button className='common-button' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
                 </form>
                 <div>
                 <h6 className='text-center mt-3'>or</h6>
