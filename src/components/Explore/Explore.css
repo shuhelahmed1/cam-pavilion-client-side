@@ -5,6 +5,16 @@
     margin-bottom: 25px;
 }
 
+.spinner-section{
+    text-align: center;
+}
+
+.spinner{
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+}
+
 /* css media query for responsiveness */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -13,4 +23,11 @@
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .spinner{
+        margin-top: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    
 }
