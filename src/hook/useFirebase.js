@@ -12,6 +12,7 @@ const useFirebase = () =>{
     const [isLogin, setIsLogin] = useState(false);
     const [admin, setAdmin] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState('');
     
 
     const toggleLogin = e =>{
@@ -38,12 +39,20 @@ const useFirebase = () =>{
         
     }
     const registerNewUser = (email, password) =>{
+        if(password.length < 6 ){
+            setError('Password should be at least 6 characters long.')
+            return;
+        }
         createUserWithEmailAndPassword(auth, email,password)
         .then((result)=>{
             const newUser = {email, displayName: name}
             setUser(newUser)
             // save user to the database
             saveUser(email,name,'POST')
+            setError('')
+        })
+        .catch(error=>{
+            setError(error.message)
         })
     }
     const processLogin = (email, password) =>{
@@ -122,6 +131,7 @@ const useFirebase = () =>{
         logOut,
         handleName,
         handleGoogleLogIn,
+        error
     }
 }
 

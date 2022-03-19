@@ -31,7 +31,7 @@ const Review = () => {
                 <h2 style={{fontWeight: 'bold'}}>Please Provide a Review </h2>
                 <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
-                <textarea className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
+                <textarea required className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
                 <button className='common-button' type="submit">Submit</button>
                 </form>
             </div>

@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './AddProduct.css';
 
 const AddProduct = () => {
     const imgRef = useRef();
     const nameRef = useRef();
     const desRef = useRef();
+    const [error, setError] =  useState('');
     const handleAddProduct = e =>{
         e.preventDefault();
         const imgUrl = imgRef.current.value;
@@ -29,11 +30,12 @@ const AddProduct = () => {
         <div className='addProductSection my-5'>
             <h2 style={{fontWeight: 'bold'}}>Add a Product</h2>
             <form className='cam-pavilion-form' onSubmit={handleAddProduct}>
-                <input className='d-block w-100 my-2' type="text" ref={imgRef} placeholder='Img url'/>
-                <input className='d-block w-100' type="text" ref={nameRef} placeholder='product name'/>
-                <input className='d-block w-100 my-2' type="text" ref={desRef} placeholder='product description'/>
+                <input required className='d-block w-100 my-2' type="text" ref={imgRef} placeholder='Img url'/>
+                <input required className='d-block w-100' type="text" ref={nameRef} placeholder='product name'/>
+                <input required className='d-block w-100 my-2' type="text" ref={desRef} placeholder='product description'/>
                 <input className='common-button' type="submit" value="Submit" />
                 </form>
+                <h5>{error}</h5>
         </div>
     );
 };

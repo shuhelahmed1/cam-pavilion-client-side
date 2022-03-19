@@ -26,7 +26,7 @@ const MakeAdmin = () => {
         <h2 className='mt-5 text-center' style={{fontWeight: 'bold'}}>Create an Admin</h2>
             <div className='create-admin-form-container'>
                 <form className='cam-pavilion-form' onSubmit={handleAdminSubmit}>
-                <input onBlur={handleEmail} type="email" placeholder='Enter email'/>
+                <input required onBlur={handleEmail} type="email" placeholder='Enter email'/>
                 <button className='common-button' type='submit'>Create</button>
                 </form>
             </div>
