@@ -37,9 +37,6 @@ function App() {
         <Route path='/explore'>
         <Explore></Explore>
         </Route>
-        {/* <Route path='/product'>
-        <Product></Product>
-        </Route> */}
         <Route path='/myorders'>
           <MyOrders></MyOrders>
         </Route>

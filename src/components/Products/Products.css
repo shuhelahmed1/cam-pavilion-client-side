@@ -7,6 +7,15 @@
     color: #FFCB05;
 }
 
+.spinner-section{
+    text-align: center;
+}
+
+.spinner{
+    width: 50px;
+    height: 50px;
+}
+
 /* css media query for responsiveness */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -14,5 +23,10 @@
     .products-section{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .spinner{
+        width: 25px;
+        height: 25px;
     }
 }

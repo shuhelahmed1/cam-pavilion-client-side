@@ -10,7 +10,9 @@ const useFirebase = () =>{
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
-    const [admin, setAdmin] = useState(false)
+    const [admin, setAdmin] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    
 
     const toggleLogin = e =>{
         setIsLogin(e.target.checked)
@@ -52,6 +54,7 @@ const useFirebase = () =>{
     }
 
     const handleGoogleLogIn = () =>{
+        setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
         .then(result =>{
@@ -59,18 +62,20 @@ const useFirebase = () =>{
             setUser(result.user);
             saveUser(user.email, user.displayName,'PUT')
         })
+        .finally(()=>{setIsLoading(false)})
     }
 
     
 
     const logOut = ( ) =>{
+        setIsLoading(true)
         signOut(auth)
         .then(() => {
             setUser({})
           }).catch((error) => {
             // An error happened.
-          });
-    
+          })
+          .finally(()=>{setIsLoading(false)})
     }
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth,user=>{
@@ -108,6 +113,7 @@ const useFirebase = () =>{
     return{
         handleRegister,
         isLogin,
+        isLoading,
         handleEmail,
         handlePass,
         toggleLogin,
@@ -115,7 +121,7 @@ const useFirebase = () =>{
         admin,
         logOut,
         handleName,
-        handleGoogleLogIn
+        handleGoogleLogIn,
     }
 }
 
