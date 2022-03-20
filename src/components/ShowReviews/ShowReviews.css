@@ -1,7 +1,15 @@
 .reviews-section{
-    grid-template-columns: repeat(2,1fr);
     width: 80%;
     grid-gap: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 80px 0;
+    height: 320px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    -webkit-filter: invert(1);
+    filter: invert(1);
 }
 
 /* css media query for responsiveness */
