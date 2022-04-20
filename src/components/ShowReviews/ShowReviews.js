@@ -14,32 +14,33 @@ const ShowReviews = () => {
     },[])
     return (
         <div>
-            <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>CUSTOMER <span className='yellow-text'>REVIEWS</span></h2>
+            
             <div className='reviews-section'>
+            <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold"}}>CUSTOMER <span className='yellow-text'>REVIEWS</span></h2>
             <Carousel>
   <Carousel.Item>
-    <h5>{reviews[0]?.name}</h5>
-    <p className='text-center'>{reviews[0]?.review}</p>
+    <h5 style={{textAlign:'center'}}>{reviews[0]?.name}</h5>
+    <p style={{textAlign:'center'}}>{reviews[0]?.review}</p>
             {
-                reviews[0]?.rating == 1 && <div>
+                reviews[0]?.rating == 1 && <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
             </div> 
             }
             {
-                reviews[0]?.rating == 2 &&  <div>
+                reviews[0]?.rating == 2 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
             </div> 
             }
             {
-                reviews[0]?.rating == 3 &&  <div>
+                reviews[0]?.rating == 3 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
             </div>
             }
             {
-                reviews[0]?.rating == 4 &&  <div>
+                reviews[0]?.rating == 4 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
@@ -47,7 +48,7 @@ const ShowReviews = () => {
             </div>
             }
             {
-                reviews[0]?.rating == 5 && <div>
+                reviews[0]?.rating == 5 && <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
@@ -59,28 +60,28 @@ const ShowReviews = () => {
   
   </Carousel.Item>
   <Carousel.Item>
-    <h5>{reviews[1]?.name}</h5>
-    <p className='text-center'>{reviews[1]?.review}</p>
+    <h5 style={{textAlign:'center'}}>{reviews[1]?.name}</h5>
+    <p style={{textAlign:'center'}}>{reviews[1]?.review}</p>
     {
-                reviews[1]?.rating == 1 && <div>
+                reviews[1]?.rating == 1 && <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
             </div> 
             }
             {
-                reviews[1]?.rating == 2 &&  <div>
+                reviews[1]?.rating == 2 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
             </div> 
             }
             {
-                reviews[1]?.rating == 3 &&  <div>
+                reviews[1]?.rating == 3 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
             </div>
             }
             {
-                reviews[1]?.rating == 4 &&  <div>
+                reviews[1]?.rating == 4 &&  <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
@@ -88,7 +89,7 @@ const ShowReviews = () => {
             </div>
             }
             {
-                reviews[1]?.rating == 5 && <div>
+                reviews[1]?.rating == 5 && <div style={{textAlign:'center'}}>
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />
                 <FontAwesomeIcon icon={faStar} />

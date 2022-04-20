@@ -85,7 +85,7 @@ const useFirebase = () =>{
     const handleResetPassword = () =>{
         sendPasswordResetEmail(auth, email)
   .then(() => {
-      alert('Email reset link successfully sent.')
+      alert('Reset password email sent successfully ')
   })
   .catch((error) => {
     

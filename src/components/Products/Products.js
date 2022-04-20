@@ -20,7 +20,7 @@ const Products = () => {
     },[page])
     return (
         <>
-        <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
+        
         {
             products.length === 0 ? 
 
@@ -32,12 +32,14 @@ const Products = () => {
 
          :  
         <div>
-            
-            <div className='products-section mx-auto d-grid'>
-                {
-                    products.map(product=> <Product key={product._id} product={product}></Product>)
-                }
-                
+            <div className='products-section mx-auto'>
+            <h2 className='mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
+                <div className='products-container d-grid'>
+                    {
+                        products.map(product=> <Product key={product._id} product={product}></Product>)
+                    }
+                    
+                </div>
             </div>
             <div className="w-75 pagination mx-auto my-3">
                     {

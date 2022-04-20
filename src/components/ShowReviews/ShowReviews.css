@@ -1,7 +1,6 @@
 .reviews-section{
     width: 80%;
     grid-gap: 20px;
-    text-align: center;
     margin: 0 auto;
     padding: 80px 0;
     height: 320px;
@@ -21,8 +20,4 @@
         width: 90%;
         grid-gap: 20px;
     }
-    .reviews-section{
-        width: 95%;
-    }
-    
 }

@@ -1,8 +1,8 @@
 .about-us-section{
-    background-color: rgba(226, 222, 11, 0.123);
+    width: 80%;
 }
 .about-us-container{
-    width: 80%;
+   width: 100%;
 }
 .ceo-img{
     width: 40%;
@@ -17,8 +17,10 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    .about-us-container{
+    .about-us-section{
         width: 90%;
+    }
+    .about-us-container{
         flex-direction: column;
     }
     .about-us-container p{

@@ -1,0 +1,93 @@
+[debug] [2022-04-20T20:56:04.608Z] ----------------------------------------------------------------------
+[debug] [2022-04-20T20:56:04.611Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SHUHEL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-04-20T20:56:04.612Z] CLI Version:   10.4.0
+[debug] [2022-04-20T20:56:04.612Z] Platform:      win32
+[debug] [2022-04-20T20:56:04.612Z] Node Version:  v14.17.1
+[debug] [2022-04-20T20:56:04.620Z] Time:          Thu Apr 21 2022 02:56:04 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-20T20:56:04.621Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-20T20:56:04.720Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-20T20:56:04.721Z] > authorizing via signed-in user (shuhel020@gmail.com)
+[debug] [2022-04-20T20:56:04.721Z] [iam] checking project cam-pavilion for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-04-20T20:56:04.727Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cam-pavilion:testIamPermissions [none]
+[debug] [2022-04-20T20:56:04.727Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cam-pavilion:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-04-20T20:56:07.605Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cam-pavilion:testIamPermissions 200
+[debug] [2022-04-20T20:56:07.605Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cam-pavilion:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-04-20T20:56:07.608Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion [none]
+[debug] [2022-04-20T20:56:08.452Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion 200
+[debug] [2022-04-20T20:56:08.452Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion {"projectId":"cam-pavilion","projectNumber":"75575563459","displayName":"Cam Pavilion","name":"projects/cam-pavilion","resources":{"hostingSite":"cam-pavilion"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'cam-pavilion'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-04-20T20:56:08.466Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion [none]
+[debug] [2022-04-20T20:56:09.219Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion 200
+[debug] [2022-04-20T20:56:09.219Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cam-pavilion {"projectId":"cam-pavilion","projectNumber":"75575563459","displayName":"Cam Pavilion","name":"projects/cam-pavilion","resources":{"hostingSite":"cam-pavilion"},"state":"ACTIVE"}
+[debug] [2022-04-20T20:56:09.228Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions [none]
+[debug] [2022-04-20T20:56:09.229Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-20T20:56:11.722Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions 200
+[debug] [2022-04-20T20:56:11.722Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions {"name":"projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cam-pavilion]: beginning deploy... 
+[info] i  hosting[cam-pavilion]: found 14 files in build 
+[debug] [2022-04-20T20:56:12.797Z] [hosting] hash cache [YnVpbGQ] stored for 14 files
+[debug] [2022-04-20T20:56:12.798Z] [hosting][hash queue][FINAL] {"max":519,"min":16,"avg":64.28571428571429,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":549}
+[debug] [2022-04-20T20:56:12.798Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c:populateFiles [none]
+[debug] [2022-04-20T20:56:12.799Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c:populateFiles {"files":{"/favicon.ico":"6a6586c1299f1efdd26e9ec9fe06e69f1bf29692566ae21bc0efe62fe3aec1c3","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13","/index.html":"526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3","/static/css/main.054cbc72.css":"2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c","/static/css/main.054cbc72.css.map":"4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4","/static/js/787.ad7e27d7.chunk.js":"32ee7d98174f4378d14c389cd694eeb59ff2e028d568c7601881ea614e8ea29b","/static/js/787.ad7e27d7.chunk.js.map":"f1a6290492d4b329214a820f17a9a4eaa5783757c54c8e73c0f7a6d8b86f6fdb","/static/js/main.249c2ee6.js.LICENSE.txt":"503f71f1a55f64f057d61a8c76e7503496ed98975c1444db0a695ea57f5e6a38","/static/js/main.249c2ee6.js":"3daf0747f909c939a831cd200a7df526bba16f1d47db3a7a20214f116664be4a","/static/js/main.249c2ee6.js.map":"d81c62cce0cc276696693da47234af7d34bb91fd4ca8816282b9894afd899401"}}
+[debug] [2022-04-20T20:56:14.906Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c:populateFiles 200
+[debug] [2022-04-20T20:56:14.907Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c:populateFiles {"uploadRequiredHashes":["526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3","4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4","4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13","2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files"}
+[debug] [2022-04-20T20:56:14.915Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3 [none]
+[debug] [2022-04-20T20:56:14.915Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3 [stream]
+[debug] [2022-04-20T20:56:14.920Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4 [none]
+[debug] [2022-04-20T20:56:14.921Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4 [stream]
+[debug] [2022-04-20T20:56:14.925Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13 [none]
+[debug] [2022-04-20T20:56:14.926Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13 [stream]
+[debug] [2022-04-20T20:56:14.928Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c [none]
+[debug] [2022-04-20T20:56:14.929Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c [stream]
+[debug] [2022-04-20T20:56:14.930Z] [hosting][populate queue][FINAL] {"max":2118,"min":2118,"avg":2118,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2134}
+[debug] [2022-04-20T20:56:14.931Z] [hosting] uploads queued: 4
+[debug] [2022-04-20T20:56:17.055Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3 200
+[debug] [2022-04-20T20:56:17.056Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/526aa0018bba1eebd029a5622c16cc0c48c8da36689d309a5e5215fa508469f3 [stream]
+[debug] [2022-04-20T20:56:17.395Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c 200
+[debug] [2022-04-20T20:56:17.396Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/2cd8996b026e0a0b24a7a01092b63400c2c5e0d9d85cb5f1c76bd3efb2cbe95c [stream]
+[debug] [2022-04-20T20:56:17.989Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4 200
+[debug] [2022-04-20T20:56:17.990Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4687156ce26650089136acc08c9ce3c88422a6404e880d75a5fd4436018b06e4 [stream]
+[debug] [2022-04-20T20:56:20.318Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13 200
+[debug] [2022-04-20T20:56:20.319Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cam-pavilion/versions/54953e4e7ce91c8c/files/4ae0b479bcd259f1a3d544658ec3be750032817403c0bfd88218e8708a029d13 [stream]
+[debug] [2022-04-20T20:56:20.319Z] [hosting][upload queue][FINAL] {"max":5407,"min":2148,"avg":3279.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":5411}
+[info] +  hosting[cam-pavilion]: file upload complete 
+[debug] [2022-04-20T20:56:20.322Z] [hosting] deploy completed after 8596ms
+[debug] [2022-04-20T20:56:20.338Z] [
+  {
+    "config": {
+      "public": "build",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "cam-pavilion"
+    },
+    "site": "cam-pavilion",
+    "version": "projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c"
+  }
+]
+[info] i  hosting[cam-pavilion]: finalizing version... 
+[debug] [2022-04-20T20:56:20.347Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c updateMask=status
+[debug] [2022-04-20T20:56:20.348Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c {"status":"FINALIZED"}
+[debug] [2022-04-20T20:56:24.244Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c 200
+[debug] [2022-04-20T20:56:24.244Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c {"name":"projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-20T20:56:11.294384Z","createUser":{"email":"shuhel020@gmail.com"},"finalizeTime":"2022-04-20T20:56:22.174413Z","finalizeUser":{"email":"shuhel020@gmail.com"}}
+[debug] [2022-04-20T20:56:24.245Z] [hosting] finalized version for cam-pavilion:[object Object]
+[info] +  hosting[cam-pavilion]: version finalized 
+[info] i  hosting[cam-pavilion]: releasing new version... 
+[debug] [2022-04-20T20:56:24.250Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/releases versionName=projects%2F75575563459%2Fsites%2Fcam-pavilion%2Fversions%2F54953e4e7ce91c8c
+[debug] [2022-04-20T20:56:24.250Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/releases {"message":null}
+[debug] [2022-04-20T20:56:26.256Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/releases 200
+[debug] [2022-04-20T20:56:26.256Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/75575563459/sites/cam-pavilion/releases {"name":"projects/75575563459/sites/cam-pavilion/releases/1650488185529698","version":{"name":"projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-20T20:56:11.294384Z","createUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"},"finalizeTime":"2022-04-20T20:56:22.174413Z","finalizeUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"}},"type":"DEPLOY","releaseTime":"2022-04-20T20:56:25.529698717Z","releaseUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"}}
+[debug] [2022-04-20T20:56:26.257Z] [hosting] release: {"name":"projects/75575563459/sites/cam-pavilion/releases/1650488185529698","version":{"name":"projects/75575563459/sites/cam-pavilion/versions/54953e4e7ce91c8c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-20T20:56:11.294384Z","createUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"},"finalizeTime":"2022-04-20T20:56:22.174413Z","finalizeUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"}},"type":"DEPLOY","releaseTime":"2022-04-20T20:56:25.529698717Z","releaseUser":{"email":"shuhel020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14Gj-kZpz81qNQ8rPujWdV0gz1DXTcqEwWu9PioS6yA"}}
+[info] +  hosting[cam-pavilion]: release complete 

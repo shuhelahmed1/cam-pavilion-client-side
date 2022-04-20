@@ -52,15 +52,17 @@ const Home = () => {
             <Products></Products>
 
             {/* about us section */}
-            <section className='w-100 about-us-section'>
-              <h2 style={{width:"80%",fontWeight:"bold"}} className='mx-auto mt-5 mb-3 pt-3'>ABOUT <span className='yellow-text'>US</span></h2>
-              <div className='about-us-container d-flex mx-auto space-between pb-4'>
-                <div className='ceo-img'>
-                  <img className='w-75 mb-2' src="https://i.ibb.co/M7kX9K3/professional-man.jpg" alt="professional-man" border="1"></img>
-                  <p>CEO</p>
-                </div>
-                <div className='ceo-speech'>
-                  <p className='text-justify' style={{fontSize: '11px'}}>We created Cam Pavilion because we saw the need for a better way to buy and sell photography and videography equipment. Passionate about the craft ourselves, we dreamed of a more focused platform designed for industry professionals and hobbyists.</p>
+            <section style={{backgroundColor: 'rgba(226, 222, 11, 0.123)'}}>
+              <div className='about-us-section mx-auto'>
+                <h2 style={{fontWeight:"bold"}} className='mx-auto mt-5 mb-3 pt-3'>ABOUT <span className='yellow-text'>US</span></h2>
+                <div className='about-us-container d-flex mx-auto space-between pb-4'>
+                  <div className='ceo-img'>
+                    <img className='w-75 mb-2' src="https://i.ibb.co/M7kX9K3/professional-man.jpg" alt="professional-man" border="1"></img>
+                    <p>CEO</p>
+                  </div>
+                  <div className='ceo-speech'>
+                    <p className='text-justify' style={{fontSize: '11px'}}>We created Cam Pavilion because we saw the need for a better way to buy and sell photography and videography equipment. Passionate about the craft ourselves, we dreamed of a more focused platform designed for industry professionals and hobbyists.</p>
+                  </div>
                 </div>
               </div>
             </section>
