@@ -10,7 +10,7 @@ const Purchase = () => {
         fetch(`https://morning-refuge-64241.herokuapp.com/products/${id}`)
         .then(res=>res.json())
         .then(data=>setPurchase(data))
-    },[])
+    },[id])
     
     
     return (

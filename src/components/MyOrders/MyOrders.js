@@ -6,7 +6,11 @@ const MyOrders = () => {
     const [orders,setOrders] = useState([])
     const {user} = useAuth();
     useEffect(()=>{
-        fetch(`https://morning-refuge-64241.herokuapp.com/orders?email=${user.email}`)
+        fetch(`https://morning-refuge-64241.herokuapp.com/orders?email=${user.email}`, {
+            headers:{
+                'authorization' : `Bearer ${localStorage.getItem('idToken')}`
+            }
+        })
         .then(res=>res.json())
         .then(data=> setOrders(data))
     },[user.email])

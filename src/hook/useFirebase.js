@@ -1,4 +1,4 @@
-import {  getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {  getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider, getIdToken, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import  { useEffect, useState } from 'react';
 import initializeAuthentication from '../components/authSystem/authSystem.init';
 
@@ -50,10 +50,18 @@ const useFirebase = () =>{
             // save user to the database
             saveUser(email,name,'POST')
             setError('')
+            verifyEmail();
         })
         .catch(error=>{
             setError(error.message)
         })
+    }
+    const verifyEmail = () =>{
+        sendEmailVerification(auth.currentUser)
+  .then(() => {
+    // Email verification sent!
+    // ...
+  });
     }
     const processLogin = (email, password) =>{
         signInWithEmailAndPassword(auth, email,password)
@@ -74,6 +82,16 @@ const useFirebase = () =>{
         .finally(()=>{setIsLoading(false)})
     }
 
+    const handleResetPassword = () =>{
+        sendPasswordResetEmail(auth, email)
+  .then(() => {
+      alert('Email reset link successfully sent.')
+  })
+  .catch((error) => {
+    
+  });
+    }
+
     
 
     const logOut = ( ) =>{
@@ -89,6 +107,8 @@ const useFirebase = () =>{
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth,user=>{
             if(user){
+                getIdToken(user)
+                .then(idToken => localStorage.setItem('idToken', idToken))
                 setUser(user)
             }
             else{
@@ -96,7 +116,7 @@ const useFirebase = () =>{
             }
         });
         return ()=> unsubscribed;
-    },[])
+    },[auth])
 
     const saveUser = (email, displayName,method) =>{
         const user = {email, displayName}
@@ -131,7 +151,8 @@ const useFirebase = () =>{
         logOut,
         handleName,
         handleGoogleLogIn,
-        error
+        error,
+        handleResetPassword
     }
 }
 

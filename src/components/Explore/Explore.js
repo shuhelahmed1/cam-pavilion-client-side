@@ -9,7 +9,7 @@ const Explore = () => {
     useEffect(()=>{
         fetch('https://morning-refuge-64241.herokuapp.com/products')
         .then(res=>res.json())
-        .then(data=>setMoreProducuts(data))
+        .then(data=>setMoreProducuts(data.products))
     },[])
     return (
         <>
@@ -21,7 +21,7 @@ const Explore = () => {
             </Spinner>
             </div> : <div className='more-products-section d-grid mx-auto'>
             {
-                moreProducts.map(moreproduct => <MoreProduct key={moreproduct._id} moreproduct={moreproduct}></MoreProduct>)
+                moreProducts.slice(0,14).map(moreproduct => <MoreProduct key={moreproduct._id} moreproduct={moreproduct}></MoreProduct>)
             }
         </div>
         }

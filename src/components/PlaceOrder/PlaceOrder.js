@@ -8,6 +8,7 @@ const PlaceOrder = () => {
     const addressRef = useRef();
     const phoneRef = useRef();
     const {user} = useAuth();
+    console.log(user)
     const hanndlePurchase = e =>{
         e.preventDefault();
         // const id = idRef.current.value;
@@ -34,7 +35,7 @@ const PlaceOrder = () => {
             <h5 className='text-center mt-4'>Please Provide Your Information</h5>
             <form className='cam-pavilion-form' onSubmit={hanndlePurchase}>
                 {/* <p>Product Id: <input className='w-100' type="text" ref={idRef} value={purchase._id}/></p> */}
-                <p>Name: <input className='w-100' type="text" ref={nameRef} value={user.diplayname}/></p>
+                <p>Name: <input className='w-100' type="text" ref={nameRef} value={user.displayName}/></p>
                 <p>Email: <input className='w-100' type="email" ref={emailRef} value={user.email}/></p>
                 <p>Address: <input className='w-100' ref={addressRef} type="text"/></p>
                 <p>Phone: <input className='w-100' ref={phoneRef} type="number" /></p>

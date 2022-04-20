@@ -16,6 +16,18 @@
     height: 50px;
 }
 
+/* pagination section */
+
+.pagination button {
+    margin: 0 20px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.pagination .selected {
+    background-color: yellow;
+}
+
 /* css media query for responsiveness */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

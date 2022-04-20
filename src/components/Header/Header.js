@@ -6,6 +6,8 @@ import './header.css';
 
 const Header = () => {
   const {user, logOut, admin} = useAuth();
+  const userProfilePhoto = user.photoURL;
+  console.log(userProfilePhoto)
     return (
         <div>
   <Navbar expand="md" collapseOnSelect style={{backgroundColor: "black"}} variant="dark">
@@ -43,11 +45,10 @@ const Header = () => {
       }
       </NavDropdown>
       }
-     
-     
-     
-      
-      
+
+      {
+        user.email && <img src={userProfilePhoto} alt="" />
+      }
       
     </Nav>
     </Navbar.Collapse>

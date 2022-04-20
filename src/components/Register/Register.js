@@ -1,7 +1,7 @@
 import useAuth from '../../hook/useAuth';
 import './Register.css';
 const Register = () => {
-    const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn, error} = useAuth();
+    const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn, error, handleResetPassword} = useAuth();
     return (
         <div className='register-form-section mx-auto my-4'>
             <h2 style={{fontWeight: 'bold'}}>{isLogin ? 'Login' : 'Register'} Here: </h2>
@@ -11,8 +11,8 @@ const Register = () => {
                 <input required className='d-block w-100 my-2' onBlur={handlePass} type="password" placeholder='Password'/>
                 <input onChange={toggleLogin} type="checkbox" id='check1' placeholder='pass'/>
                 <label htmlFor='check1' className='mx-2'>Already registered?</label>
-                
                 <button className='common-button' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
+                <button className='common-button ms-2' onClick={handleResetPassword}>Forget Password</button>
                 </form>
                 <h5 className='text-danger mt-3'>{error}</h5>
                 <div>

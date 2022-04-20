@@ -1,5 +1,4 @@
 .reviews-section{
-    position: relative;
     width: 80%;
     grid-gap: 20px;
     text-align: center;
@@ -9,10 +8,8 @@
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
-    position: absolute;
     -webkit-filter: invert(1);
     filter: invert(1);
-    top: 60px;
 }
 
 /* css media query for responsiveness */
