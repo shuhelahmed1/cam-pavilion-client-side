@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import useAuth from '../../hook/useAuth';
 
-const PlaceOrder = () => {
+const PurchaseForm = () => {
     // const idRef = useRef();
     const nameRef = useRef();
     const emailRef = useRef();
@@ -45,4 +45,4 @@ const PlaceOrder = () => {
     );
 };
 
-export default PlaceOrder;
+export default PurchaseForm;

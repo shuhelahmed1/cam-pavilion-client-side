@@ -68,6 +68,9 @@ const useFirebase = () =>{
         .then((result)=>{
             setUser(result.user);
         })
+        .catch(error=>{
+            setError(error.message)
+        })
     }
 
     const handleGoogleLogIn = () =>{

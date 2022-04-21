@@ -2,7 +2,8 @@
     color: #FFCB05 !important;
 }
 .nav-link{
-    margin-left: 5px;
+    color: #000 !important;
+    margin: 0 5px;
 }
 .yellow-text{
     color: #FFCB05;

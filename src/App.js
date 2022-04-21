@@ -13,7 +13,7 @@ import ManageProducts from './components/ManageProducts/ManageProducts';
 import MyOrders from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Payment/Payment';
-import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PurchaseForm from './components/PurchaseForm/PurchaseForm';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Purchase from './components/Purchase/Purchase';
 import Register from './components/Register/Register';
@@ -48,8 +48,8 @@ function App() {
         <Route path='/register'>
         <Register></Register>
         </Route>
-        <Route path='/products/purchase/placeorder'>
-         <PlaceOrder></PlaceOrder>
+        <Route path='/products/purchase/PurchaseForm'>
+         <PurchaseForm></PurchaseForm>
        </Route>
         <PrivateRoute path='/products/purchase/:id'>
          <Purchase></Purchase>
