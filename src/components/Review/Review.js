@@ -14,7 +14,7 @@ const Review = () => {
         const name = nameRef.current.value;
         const rating = ratingRef.current.value;
         if(rating>5 || rating <= 0){
-            setError('Please provide rating between 1-5 numbers')
+            setError('Please provide rating between 1-5')
             return;
         }
         const newReview = {review, name, rating};
@@ -40,7 +40,7 @@ const Review = () => {
                 <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
                 <textarea required className='d-block w-100 my-2' type="text" ref={reviewRef} placeholder='Your comment'/>
-                <input className='d-block w-100 mb-2' type="number" ref={ratingRef} placeholder='Your rating (Please enter number between 1-5)'/>
+                <input className='d-block w-100 mb-2' type="number" ref={ratingRef} placeholder='Your rating (1-5)'/>
                 <button className='common-button' type="submit">Submit</button>
                 </form>
                 <h5 className='text-danger'>{error}</h5>

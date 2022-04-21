@@ -12,7 +12,7 @@ const Register = () => {
                 <input onChange={toggleLogin} type="checkbox" id='check1' placeholder='pass'/>
                 <label htmlFor='check1' className='mx-2'>Already registered?</label>
                 <button className='common-button' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
-                <button className='common-button ms-2' onClick={handleResetPassword}>Forget Password</button>
+                <button className='d-block common-button mt-2' onClick={handleResetPassword}>Forget Password</button>
                 </form>
                 <h5 className='text-danger mt-3'>{error}</h5>
                 <div>

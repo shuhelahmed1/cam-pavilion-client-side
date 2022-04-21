@@ -7,7 +7,6 @@ import './header.css';
 const Header = () => {
   const {user, logOut, admin} = useAuth();
   const userProfilePhoto = user.photoURL;
-  console.log(userProfilePhoto)
     return (
         <div>
   <Navbar expand="md" collapseOnSelect style={{backgroundColor: "black"}} variant="dark">
@@ -27,7 +26,7 @@ const Header = () => {
         
         <NavDropdown.Divider />
         {
-        user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
+        user.email && <button className='ms-2 common-button' onClick={logOut}>Logout</button>
       }
       </NavDropdown>
       }
@@ -39,15 +38,21 @@ const Header = () => {
         <Nav.Link as={Link} to='/manageorders' style={{color: "black"}}>Manage Orders</Nav.Link>
         <Nav.Link as={Link} to='/manageproducts' style={{color: "black"}}>Manage Products</Nav.Link>
         <NavDropdown.Divider />
-        <NavDropdown.Divider />
         {
-        user.email && <button className='ms-1 common-button' onClick={logOut}>Logout</button>
+        user.email && <button className='ms-2 common-button' onClick={logOut}>Logout</button>
       }
       </NavDropdown>
       }
 
       {
-        user.email && <img src={userProfilePhoto} alt="" />
+        user.email &&
+
+        <NavDropdown id="nav-dropdown" title={
+        <img  style={{width:'32px', height:'32px',display: 'inline-block', borderRadius:'50%',marginTop: '5px'}} src={userProfilePhoto} alt="Pro" />
+        }>
+          <button className='ms-2 common-button' onClick={logOut}>Logout</button>
+        </NavDropdown>
+         
       }
       
     </Nav>

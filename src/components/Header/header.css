@@ -1,8 +1,8 @@
 #nav-dropdown{
     color: #FFCB05 !important;
 }
-#nav-dropdown Link{
-    margin-left: 10px;
+.nav-link{
+    margin-left: 5px;
 }
 .yellow-text{
     color: #FFCB05;
