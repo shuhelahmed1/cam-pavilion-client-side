@@ -16,14 +16,16 @@ const Purchase = () => {
         <h2 className='text-center mt-3'>Purchase Here</h2>
         <div style={{width: '90%'}} className='d-flex mx-auto border p-3 mb-3'>
             <div style={{width: '50%'}} className='d-flex'>
-                <div><img className='w-75' src={purchase.imgUrl} alt="" /></div>
+                <div>
+                    <img className='w-75' src={purchase.imgUrl} alt="" />
+                </div>
                 <div>
                 <h4>{purchase.name}</h4>
                 <p>{purchase.des}</p>
                 </div>
             </div>
             <div style={{width: '50%'}}>
-            <PurchaseForm></PurchaseForm>
+            <PurchaseForm purchase={purchase}></PurchaseForm>
             </div>
             
         </div>
