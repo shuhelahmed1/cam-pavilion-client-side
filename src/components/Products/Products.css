@@ -2,10 +2,6 @@
     width: 80%;
 }
 
-.products-container{
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
-}
 .yellow-text{
     color: #FFCB05;
 }

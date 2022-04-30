@@ -34,7 +34,7 @@ const Review = () => {
 
     }
     return (
-        <div>
+        <>
             <div className='w-75 mx-auto mt-5'>
                 <h2 style={{fontWeight: 'bold'}}>Please Provide a Review </h2>
                 <form className='cam-pavilion-form' onSubmit={addReview}>
@@ -45,7 +45,7 @@ const Review = () => {
                 </form>
                 <h5 className='text-danger'>{error}</h5>
             </div>
-        </div>
+        </>
     );
 };
 

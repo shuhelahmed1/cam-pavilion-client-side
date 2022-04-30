@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hook/useAuth';
+import handleDeleteOrder from '../MyOrders/MyOrders'
 
 const MyOrder = ({order}) => {
     const [orders,setOrders] = useState([])
@@ -14,26 +15,10 @@ const MyOrder = ({order}) => {
         .then(data=> setOrders(data))
     },[user.email])
     
-    // delete an order
-    const handleDeleteOrder = id =>{
-        const confirm = window.confirm('Are you sure to cancel the order.');
-        if(confirm){
-            const url = `https://morning-refuge-64241.herokuapp.com/orders/${id}`;
-        fetch(url , {
-            method: 'DELETE'
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            if(data.deletedCount){
-                alert('Successfully cancelled the order.');
-                const remainingOrders = orders.filter(order => order._id !== id)
-                setOrders(remainingOrders)
-            }
-        })
-        }
-    }
+    
     return (
-        <div style={{fontWeight: 'bold'}} className='border border-1 p-3'>
+        <>
+            <div style={{fontWeight: 'bold'}} className='border border-1 p-3'>
             <p>Name: {order.name}</p>
             <p>Email: {order.email}</p>
             <p>Address: {order.address}</p>
@@ -41,6 +26,7 @@ const MyOrder = ({order}) => {
             <p>Product Id: {order._id}</p>
             <button className='common-button' onClick={()=>handleDeleteOrder(order._id)}>Cancel</button>
         </div>
+        </>
     );
 };
 

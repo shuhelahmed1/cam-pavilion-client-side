@@ -34,7 +34,7 @@ const Products = () => {
         <div>
             <div className='products-section mx-auto'>
             <h2 className='mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
-                <div className='products-container d-grid'>
+                <div className='row w-100 mx-auto'>
                     {
                         products.map(product=> <Product key={product._id} product={product}></Product>)
                     }
@@ -46,7 +46,7 @@ const Products = () => {
                     [...Array(pageCount).keys()]
                     .map(number => <button className={number === page ? 'selected' : ''} key={number} onClick={()=> setPage(number)}>{number}</button>)
                     }
-                </div>
+            </div>
         </div> 
         }
         </>
