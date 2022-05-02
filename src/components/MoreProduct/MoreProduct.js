@@ -4,7 +4,7 @@ import './MoreProduct.css';
 
 const MoreProduct = ({moreproduct}) => {
     return (
-        <div className='moreProductCard'>
+        <div className='moreProductCard col'>
             <img src={moreproduct.imgUrl} alt="" />
             <hr />
             <h6>{moreproduct.name}</h6>

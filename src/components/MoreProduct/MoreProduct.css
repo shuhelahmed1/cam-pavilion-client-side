@@ -2,6 +2,7 @@
     box-shadow: 1px 1px 4px 1px grey;
     padding: 10px;
     border-radius: 5px;
+    width: 32%;
 }
 .moreProductCard img{
     width: 50%;
@@ -11,4 +12,20 @@
 .moreProductCard h6,p{
     text-align: justify;
     font-size: 12px;
+}
+
+/* css media query for responsiveness */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .moreProductCard{
+        width: 45%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .moreProductCard{
+    width: 100%;
+    }
 }

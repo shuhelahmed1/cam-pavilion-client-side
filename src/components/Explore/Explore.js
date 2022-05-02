@@ -15,15 +15,23 @@ const Explore = () => {
         <>
         <h2 style={{width: '90%',fontWeight: 'bold'}} className='mx-auto mt-5 mb-3'>MORE <span className='yellow-text'>PRODUCTS</span></h2>
         {
-            moreProducts.length === 0 ? <div className='spinner-section'>
-            <Spinner className='spinner' animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-            </Spinner>
-            </div> : <div className='more-products-section d-grid mx-auto'>
-            {
-                moreProducts.slice(0,14).map(moreproduct => <MoreProduct key={moreproduct._id} moreproduct={moreproduct}></MoreProduct>)
-            }
-        </div>
+            moreProducts.length === 0 ? 
+    
+            <div className='spinner-section'>
+                <Spinner className='spinner' animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+                </Spinner>
+            </div>
+
+            : 
+
+            <div className='container'>
+                <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-between'>
+                {
+                    moreProducts.slice(0,14).map(moreproduct => <MoreProduct key={moreproduct._id} moreproduct={moreproduct}></MoreProduct>)
+                }
+                </div>
+            </div>
         }
         
         </>

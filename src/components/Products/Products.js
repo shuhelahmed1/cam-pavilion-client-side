@@ -32,15 +32,14 @@ const Products = () => {
 
          :  
         <div>
-            <div className='products-section mx-auto'>
-            <h2 className='mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
-                <div className='row w-100 mx-auto'>
+            <div className='container'>
+                <h2 className='mt-5 mb-3' style={{fontWeight: "bold",width:"80%"}}>OUR <span className='yellow-text'>PRODUCTS</span></h2>
+                <div className='products-container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-between'>
                     {
                         products.map(product=> <Product key={product._id} product={product}></Product>)
                     }
-                    
-                </div>
             </div>
+        </div>
             <div className="w-75 pagination mx-auto my-3">
                     {
                     [...Array(pageCount).keys()]

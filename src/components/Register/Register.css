@@ -1,6 +1,11 @@
 .register-form-section{
     width: 80%;
 }
+.text-input{
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+}
 .common-button{
     background-color: white;
     font-weight: bold;

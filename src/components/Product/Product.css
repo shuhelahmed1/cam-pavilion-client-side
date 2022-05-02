@@ -1,9 +1,8 @@
 .product-card{
     box-shadow: 1px 1px 4px 1px grey;
-    padding: 10px;
     border-radius: 5px;
-    width: 31%;
-    margin: 5px;
+    width: 32%;
+    padding: 10px;
 }
 .product-card img{
     width: 50%;
@@ -25,6 +24,6 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     .product-card{
-        width: 90%;
+    width: 100%;
     }
 }
