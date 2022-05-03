@@ -26,6 +26,6 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     .moreProductCard{
-    width: 100%;
+    width: 95%;
     }
 }
