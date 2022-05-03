@@ -26,7 +26,7 @@ const Explore = () => {
             : 
 
             <div className='container'>
-                <div className='w-100 more-products-section row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
+                <div className='more-products-section row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4'>
                 {
                     moreProducts.slice(0,14).map(moreproduct => <MoreProduct key={moreproduct._id} moreproduct={moreproduct}></MoreProduct>)
                 }

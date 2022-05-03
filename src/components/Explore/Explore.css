@@ -1,6 +1,7 @@
 .more-products-section{
-    margin: 0;
-    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    justify-content:space-between;
 }
 
 .spinner-section{

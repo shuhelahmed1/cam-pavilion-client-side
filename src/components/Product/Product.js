@@ -4,7 +4,7 @@ import './Product.css';
 const Product = ({product}) => {
     return (
         <div className='product-card col'>
-            <img style={{width: '50%'}} className='d-block mx-auto' src={product.imgUrl} alt="productImg" />
+            <img className='d-block mx-auto' src={product.imgUrl} alt="productImg" />
             <hr />
             <h6>{product.name}</h6>
             <p>{product.des}</p>
