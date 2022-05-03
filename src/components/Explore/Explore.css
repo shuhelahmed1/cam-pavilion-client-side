@@ -1,5 +1,6 @@
 .more-products-section{
-   
+    margin: 0;
+    justify-content: space-between;
 }
 
 .spinner-section{
@@ -17,7 +18,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     .more-products-section{
-       
+       justify-content: center;
     }
 
     .spinner{
