@@ -51,7 +51,7 @@ const MyOrders = () => {
              : 
              <div className='w-75 mx-auto my-4'>
             <h2 style={{fontWeight: 'bold'}}>My Orders</h2>
-            <div className='d-grid orders-container'>
+            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 orders-container'>
                 {
                     orders.map(order=>
                         <MyOrder key={order._id} order={order}></MyOrder> 

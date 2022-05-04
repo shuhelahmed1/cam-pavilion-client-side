@@ -30,7 +30,7 @@ const PurchaseForm = ({purchase}) => {
         })
     }
     return (
-        <div className='w-75 mx-auto my-3'>
+        <div className='my-3'>
             <h5 className='text-center mt-4'>Please Provide Your Information</h5>
             <form className='cam-pavilion-form' onSubmit={hanndlePurchase}>
                 <p>Name: <input className='w-100' type="text" ref={nameRef} readOnly value={user.displayName}/></p>

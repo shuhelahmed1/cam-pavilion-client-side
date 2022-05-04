@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import PurchaseForm from '../PurchaseForm/PurchaseForm';
+import './Purchase.css';
 const Purchase = () => {
     const [purchase,setPurchase] = useState({});
     const {id} = useParams();
@@ -14,8 +15,8 @@ const Purchase = () => {
     return (
         <>
         <h2 className='text-center mt-3'>Purchase Here</h2>
-        <div style={{width: '90%'}} className='d-flex mx-auto border p-3 mb-3'>
-            <div style={{width: '50%'}} className='d-flex'>
+        <div className='purchase-section row row-cols-1 row-cols-md-2 row-cols-lg-2'>
+            <div className='col d-flex'>
                 <div>
                     <img className='w-75' src={purchase.imgUrl} alt="" />
                 </div>
@@ -24,10 +25,9 @@ const Purchase = () => {
                 <p>{purchase.des}</p>
                 </div>
             </div>
-            <div style={{width: '50%'}}>
+            <div className='col'>
             <PurchaseForm purchase={purchase}></PurchaseForm>
             </div>
-            
         </div>
         
         </>

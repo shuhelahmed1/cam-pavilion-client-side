@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Product.css';
 const Product = ({product}) => {
     return (
-        <div className='product-card col'>
+        <div className='product-card'>
             <img className='d-block mx-auto' src={product.imgUrl} alt="productImg" />
             <hr />
             <h6>{product.name}</h6>

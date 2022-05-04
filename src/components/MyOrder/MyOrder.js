@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hook/useAuth';
 import handleDeleteOrder from '../MyOrders/MyOrders'
-
+import './MyOrder.css';
 const MyOrder = ({order}) => {
     const [orders,setOrders] = useState([])
     const {user} = useAuth();
@@ -18,7 +18,7 @@ const MyOrder = ({order}) => {
     
     return (
         <>
-            <div style={{fontWeight: 'bold'}} className='border border-1 p-3'>
+            <div className='order-card'>
             <p>Name: {order.name}</p>
             <p>Email: {order.email}</p>
             <p>Address: {order.address}</p>

@@ -1,24 +1,24 @@
-.review-section{
-    width: 80%;
-    margin: 20px auto;
-}
-.cam-pavilion-form{
-    box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.164);
-    padding: 20px;
+.order-card{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.597);
+    font-weight: bold;
 }
 
 /* css media query for responsiveness */
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-    .review-section{
-        width: 90%;
+    .order-card{
+        width: 45%;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    .review-section{
+    .order-card{
     width: 90%;
     }
 }

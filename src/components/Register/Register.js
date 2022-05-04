@@ -4,8 +4,9 @@ const Register = () => {
     const {handleRegister,isLogin,handleEmail,handlePass,toggleLogin,handleName,handleGoogleLogIn, error, handleResetPassword} = useAuth();
     return (
         <>
+        
+        <div className='register-form-container row row-cols-lg-10 row-cols-md-10 row-cols-10 mx-auto my-4'>
         <h2 style={{fontWeight: 'bold'}}>{isLogin ? 'Login' : 'Register'} Here: </h2>
-        <div className='register-form-section row row-cols-lg-10 row-cols-md-10 row-cols-10 mx-auto my-4'>
             <form className='cam-pavilion-form col' onSubmit={handleRegister}>
                 <input className='text-input' required  onBlur={handleName} type="text" placeholder='Name'/>
                 <input className='text-input' required  onBlur={handleEmail} type="email" placeholder='Email'/>

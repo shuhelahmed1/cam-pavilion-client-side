@@ -35,7 +35,7 @@ const Review = () => {
     }
     return (
         <>
-            <div className='w-75 mx-auto mt-5'>
+            <div className='row row-cols-1 row-cols-md-1 row-cols-lg-1 review-section'>
                 <h2 style={{fontWeight: 'bold'}}>Please Provide a Review </h2>
                 <form className='cam-pavilion-form' onSubmit={addReview}>
                 <input className='d-block w-100' type="text" value={user.displayName} ref={nameRef}/>
