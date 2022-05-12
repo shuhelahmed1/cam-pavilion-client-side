@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AddProduct from './components/AddProduct/AddProduct';
 import Explore from './components/Explore/Explore';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './components/Shared/Footer/Footer';
+import Header from './components/Shared/Header/Header';
 import Home from './components/Home/Home';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import ManagaOrders from './components/ManageOrders/ManagaOrders';
@@ -19,6 +19,7 @@ import Purchase from './components/Purchase/Purchase';
 import Register from './components/Register/Register';
 import Review from './components/Review/Review';
 import AuthProvider from './context/AuthProvider';
+import ManageReviews from './components/ManageReviews/ManageReviews';
 
 function App() {
   return (
@@ -62,6 +63,9 @@ function App() {
         </Route>
         <Route path='/manageproducts'>
         <ManageProducts></ManageProducts>
+        </Route>
+        <Route path='/managereviews'>
+        <ManageReviews></ManageReviews>
         </Route>
         <Route path='/makeadmin'>
           <MakeAdmin></MakeAdmin>

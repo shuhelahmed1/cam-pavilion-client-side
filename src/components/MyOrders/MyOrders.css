@@ -1,6 +1,6 @@
 .orders-container{
     margin: 10px 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .spinner-section{

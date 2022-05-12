@@ -14,6 +14,26 @@ const MyOrder = ({order}) => {
         .then(res=>res.json())
         .then(data=> setOrders(data))
     },[user.email])
+
+    // delete an order
+    const handleDeleteOrder = id =>{
+        const confirm = window.confirm('Are you sure to cancel the order.');
+        if(confirm){
+            const url = `https://morning-refuge-64241.herokuapp.com/orders/${id}`;
+        fetch(url , {
+            method: 'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.deletedCount){
+                alert('Successfully cancelled the order.');
+                const remainingOrders = orders.filter(order => order._id !== id)
+                setOrders(remainingOrders)
+                window.location.reload(true)
+            }
+        })
+        }
+    }
     
     
     return (

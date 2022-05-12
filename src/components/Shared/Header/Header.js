@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useAuth from '../../hook/useAuth';
+import useAuth from '../../../hook/useAuth';
 import './header.css';
 
 const Header = () => {
@@ -34,6 +34,7 @@ const Header = () => {
         <Nav.Link as={Link} to='/addproduct'>Add Product</Nav.Link>
         <Nav.Link as={Link} to='/manageorders'>Manage Orders</Nav.Link>
         <Nav.Link as={Link} to='/manageproducts'>Manage Products</Nav.Link>
+        <Nav.Link as={Link} to='/managereviews'>Manage Reviews</Nav.Link>
         <Nav.Link as={Link} onClick={logOut}>Logout</Nav.Link>
       </NavDropdown>
       }

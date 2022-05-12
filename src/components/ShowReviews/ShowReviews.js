@@ -4,6 +4,7 @@ import { Carousel, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './ShowReviews.css';
+import useAuth from '../../hook/useAuth';
 
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -25,7 +26,9 @@ const ShowReviews = () => {
 <div className='reviews-section'>
 <h2 className='mx-auto mt-5 mb-3' style={{fontWeight: "bold"}}>CUSTOMER <span className='yellow-text'>REVIEWS</span></h2>
 <Carousel>
+
 <Carousel.Item>
+    <img className='review-img' src={reviews[0]?.userPhoto} alt="userImage" />
 <h5 style={{textAlign:'center'}}>{reviews[0]?.name}</h5>
 <p style={{textAlign:'center'}}>{reviews[0]?.review}</p>
 {
@@ -64,9 +67,10 @@ const ShowReviews = () => {
 </div>
 }
 
-
 </Carousel.Item>
+
 <Carousel.Item>
+    <img className='review-img' src={reviews[1]?.userPhoto} alt="userImage" />
 <h5 style={{textAlign:'center'}}>{reviews[1]?.name}</h5>
 <p style={{textAlign:'center'}}>{reviews[1]?.review}</p>
 {
@@ -104,6 +108,7 @@ const ShowReviews = () => {
     <FontAwesomeIcon icon={faStar} />
 </div>
 }
+
 </Carousel.Item>
 
 </Carousel>
