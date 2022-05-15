@@ -10,7 +10,7 @@ import Home from './components/Home/Home';
 import MakeAdmin from './components/AdminPanel/MakeAdmin/MakeAdmin';
 import ManagaOrders from './components/AdminPanel/ManageOrders/ManagaOrders';
 import ManageProducts from './components/AdminPanel/ManageProducts/ManageProducts';
-import MyOrders from './components/MyOrders/MyOrders';
+import MyOrders from './components/Dashboard/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import Payment from './components/Dashboard/Payment/Payment';
 import PurchaseForm from './components/PurchaseForm/PurchaseForm';

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hook/useAuth';
-import handleDeleteOrder from '../MyOrders/MyOrders'
+import useAuth from '../../../hook/useAuth';
 import './MyOrder.css';
 const MyOrder = ({order}) => {
     const [orders,setOrders] = useState([])

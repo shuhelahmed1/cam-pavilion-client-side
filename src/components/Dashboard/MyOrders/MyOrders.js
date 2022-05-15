@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './MyOrders.css';
-import useAuth from '../../hook/useAuth';
+import useAuth from '../../../hook/useAuth';
 import MyOrder from '../MyOrder/MyOrder';
 import { Spinner } from 'react-bootstrap';
  
