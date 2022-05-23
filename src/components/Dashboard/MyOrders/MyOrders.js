@@ -3,18 +3,27 @@ import './MyOrders.css';
 import useAuth from '../../../hook/useAuth';
 import MyOrder from '../MyOrder/MyOrder';
 import { Spinner } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
  
 
 const MyOrders = () => {
     const [orders,setOrders] = useState([])
     const {user} = useAuth();
+    const history = useHistory();
     useEffect(()=>{
         fetch(`https://morning-refuge-64241.herokuapp.com/orders?email=${user.email}`, {
             headers:{
                 'authorization' : `Bearer ${localStorage.getItem('idToken')}`
             }
         })
-        .then(res=>res.json())
+        .then(res=>{
+            if(res.status===200){
+                return res.json();
+            }
+            else if(res.status===401){
+                history.push('/register')
+            }
+        })
         .then(data=> setOrders(data))
     },[user.email])
 

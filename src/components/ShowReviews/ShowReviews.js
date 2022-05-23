@@ -4,7 +4,6 @@ import { Carousel, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './ShowReviews.css';
-import useAuth from '../../hook/useAuth';
 
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);

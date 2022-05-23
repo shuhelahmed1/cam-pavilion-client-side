@@ -19,7 +19,6 @@ import Purchase from './components/Purchase/Purchase';
 import Register from './components/Register/Register';
 import Review from './components/Dashboard/Review/Review';
 import AuthProvider from './context/AuthProvider';
-import ManageReviews from './components/AdminPanel/ManageReviews/ManageReviews';
 
 function App() {
   return (
@@ -63,9 +62,6 @@ function App() {
         </Route>
         <Route path='/manageproducts'>
         <ManageProducts></ManageProducts>
-        </Route>
-        <Route path='/managereviews'>
-        <ManageReviews></ManageReviews>
         </Route>
         <Route path='/makeadmin'>
           <MakeAdmin></MakeAdmin>

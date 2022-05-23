@@ -12,7 +12,7 @@ const Home = () => {
                       <Carousel fade>
             <Carousel.Item>
               <img
-                className="d-block w-100" style={{height: '500px'}}
+                className="d-block w-100" style={{height: '500px', backgroundPosition: 'cover' }}
                 src="https://img.freepik.com/free-photo/professional-camera-blurred-background-with-laptop_169016-10676.jpg?size=626&ext=jpg"
                 alt="First slide"
               />
