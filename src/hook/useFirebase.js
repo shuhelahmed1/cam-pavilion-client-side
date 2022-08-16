@@ -155,7 +155,8 @@ const useFirebase = () =>{
         handleName,
         handleGoogleLogIn,
         error,
-        handleResetPassword
+        handleResetPassword,
+        name
     }
 }
 

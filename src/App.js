@@ -27,50 +27,64 @@ function App() {
       <BrowserRouter>
       <Header></Header>
       <Switch>
+
         <Route exact path='/'>
         <Home></Home>
         </Route>
+
         <Route path='/home'>
         <Home></Home>
         </Route>
+
         <Route path='/explore'>
         <Explore></Explore>
         </Route>
+
         <Route path='/myorders'>
           <MyOrders></MyOrders>
         </Route>
-        <Route path='/payment'>
+
+        <PrivateRoute path='/payment'>
         <Payment></Payment>
-        </Route>
-        <Route path='/review'>
+        </PrivateRoute>
+
+        <PrivateRoute path='/review'>
         <Review></Review>
-        </Route>
+        </PrivateRoute>
+
         <Route path='/register'>
         <Register></Register>
         </Route>
+
         <Route path='/products/purchase/PurchaseForm'>
          <PurchaseForm></PurchaseForm>
        </Route>
+
         <PrivateRoute path='/products/purchase/:id'>
          <Purchase></Purchase>
        </PrivateRoute>
-        <Route path='/addproduct'>
+
+        <PrivateRoute path='/addproduct'>
         <AddProduct></AddProduct>
-        </Route>
-        <Route path='/manageorders'>
+        </PrivateRoute>
+
+        <PrivateRoute path='/manageorders'>
         <ManagaOrders></ManagaOrders>
-        </Route>
-        <Route path='/manageproducts'>
+        </PrivateRoute>
+
+        <PrivateRoute path='/manageproducts'>
         <ManageProducts></ManageProducts>
-        </Route>
-        <Route path='/makeadmin'>
+        </PrivateRoute>
+
+        <PrivateRoute path='/makeadmin'>
           <MakeAdmin></MakeAdmin>
-        </Route>
+        </PrivateRoute>
+
         <Route path='**'>
         <NotFound></NotFound>
         </Route>
+        
       </Switch>
-      {/* <MapDirection></MapDirection> */}
       <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>
