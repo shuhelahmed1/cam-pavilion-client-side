@@ -24,7 +24,7 @@ const Header = () => {
         <Nav.Link as={Link} to='/payment'>Pay</Nav.Link>
         <Nav.Link as={Link} to='/myorders'>My Orders</Nav.Link>
         <Nav.Link as={Link} to='/review'>Review</Nav.Link>
-        <button className='common-button' onClick={logOut}>Logout</button>
+        <button className='common-button ms-2' onClick={logOut}>Logout</button>
       </NavDropdown>
       }
 
@@ -35,7 +35,7 @@ const Header = () => {
         <Nav.Link as={Link} to='/manageorders'>Manage Orders</Nav.Link>
         <Nav.Link as={Link} to='/manageproducts'>Manage Products</Nav.Link>
         <Nav.Link as={Link} to='/managereviews'>Manage Reviews</Nav.Link>
-        <button className='common-button' onClick={logOut}>Logout</button>
+        <button className='common-button ms-2' onClick={logOut}>Logout</button>
       </NavDropdown>
       }
 
@@ -44,7 +44,7 @@ const Header = () => {
         <NavDropdown id="nav-dropdown" title={
         <img  style={{width:'32px', height:'32px',display: 'inline-block', borderRadius:'50%',marginTop: '5px'}} src={userProfilePhoto} alt="User Pic" />
         }>
-        <button className='common-button' onClick={logOut}>Logout</button>
+        <button className='common-button ms-2' onClick={logOut}>Logout</button>
         </NavDropdown>
       }
       
