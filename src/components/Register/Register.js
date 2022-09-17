@@ -16,7 +16,7 @@ const Register = () => {
                 <button className='common-button' type='submit'>{isLogin ? 'Login' : 'Register'}</button>
                 <button className='d-block common-button mt-2' onClick={handleResetPassword}>Forget Password</button>
                 </form>
-                <h5 className='text-danger mt-3'>{error}</h5>
+                <h5 className='text-success mt-3'>{error}</h5>
                 <div>
                 <h6 className='text-center mt-3'>or</h6>
                 <button className='common-button mx-auto d-block mt-3' onClick={handleGoogleLogIn}>Login Using Google</button>

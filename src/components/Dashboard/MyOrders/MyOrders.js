@@ -37,15 +37,28 @@ const MyOrders = () => {
             </Spinner>
             </div>
              : 
-             <div className='w-75 mx-auto my-4'>
+             <div className='mx-auto my-4 order-section text-center'>
             <h2 style={{fontWeight: 'bold'}}>My Orders</h2>
-            <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 orders-container'>
+                <table className='order-table'>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Address</td>
+                            <td>Phone</td>
+                            <td>Id</td>
+                            <td>Cancel Order</td>
+                        </tr>
+                    </thead>
                 {
                     orders.map(order=>
-                        <MyOrder key={order._id} order={order}></MyOrder> 
+                        <MyOrder key={order._id} order={order}>
+                        </MyOrder>  
                     )
                 }
-            </div>
+                </table>
+                
+           
            
         </div>
         }

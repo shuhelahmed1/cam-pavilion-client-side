@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hook/useAuth';
-import './MyOrder.css';
 const MyOrder = ({order}) => {
     const [orders,setOrders] = useState([])
     const {user} = useAuth();
@@ -33,18 +32,17 @@ const MyOrder = ({order}) => {
         })
         }
     }
-    
-    
+
     return (
         <>
-            <div className='order-card'>
-            <p>Name: {order.name}</p>
-            <p>Email: {order.email}</p>
-            <p>Address: {order.address}</p>
-            <p>Phone: {order.phone}</p>
-            <p>Product Id: {order._id}</p>
-            <button className='common-button' onClick={()=>handleDeleteOrder(order._id)}>Cancel</button>
-        </div>
+        <tr>
+            <td>{order.name}</td>
+            <td>{order.email}</td>
+            <td>{order.address}</td>
+            <td>{order.phone}</td>
+            <td>{order._id}</td>
+            <td><button style={{border: 'none', backgroundColor: 'white'}} onClick={()=>handleDeleteOrder(order._id)}>&#9986;</button></td>
+        </tr>
         </>
     );
 };

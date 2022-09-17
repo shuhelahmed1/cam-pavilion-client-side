@@ -41,7 +41,7 @@ const useFirebase = () =>{
     const registerNewUser = (email, password) =>{
         
         if(!/^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)){
-            setError('Please provide six characters, one uppercase, one lowercase, one number and one special character.')
+            setError('Please provide six characters, one uppercase, one number and one special character.')
             return;
         }
         createUserWithEmailAndPassword(auth, email,password)
@@ -68,9 +68,10 @@ const useFirebase = () =>{
         signInWithEmailAndPassword(auth, email,password)
         .then((result)=>{
             setUser(result.user);
+            setError('Login success.')
         })
         .catch(error=>{
-            setError(error.message)
+            setError(error.message)  
         })
     }
 
