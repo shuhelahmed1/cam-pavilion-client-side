@@ -20,7 +20,7 @@ const Review = () => {
             return;
         }
         const newReview = {review, name, rating, userPhoto};
-        fetch('https://morning-refuge-64241.herokuapp.com/review',{
+        fetch('https://cam-pavilion-server-side.vercel.app/review',{
             method: "POST",
             headers:{
                 'content-type':'application/json'

@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 const Explore = () => {
     const [moreProducts, setMoreProducuts] = useState([]);
     useEffect(()=>{
-        fetch('https://morning-refuge-64241.herokuapp.com/products')
+        fetch('https://cam-pavilion-server-side.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setMoreProducuts(data.products))
     },[])

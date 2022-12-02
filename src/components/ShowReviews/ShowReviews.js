@@ -8,7 +8,7 @@ import './ShowReviews.css';
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(()=>{
-        fetch('https://morning-refuge-64241.herokuapp.com/review')
+        fetch('https://cam-pavilion-server-side.vercel.app/review')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])

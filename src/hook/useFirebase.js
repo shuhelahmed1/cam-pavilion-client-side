@@ -125,7 +125,7 @@ const useFirebase = () =>{
 
     const saveUser = (email, displayName,method) =>{
         const user = {email, displayName}
-        fetch('https://morning-refuge-64241.herokuapp.com/users',{
+        fetch('https://cam-pavilion-server-side.vercel.app/users',{
             method: method,
             headers:{
                 'content-type':'application/json'
@@ -139,7 +139,7 @@ const useFirebase = () =>{
     }
 
     useEffect(()=>{
-        fetch(`https://morning-refuge-64241.herokuapp.com/users/${user.email}`)
+        fetch(`https://cam-pavilion-server-side.vercel.app/users/${user.email}`)
         .then(res=>res.json())
         .then(data=> setAdmin(data.admin))
     },[user.email])

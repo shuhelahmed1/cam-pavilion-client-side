@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e =>{
         const user = {email};
         e.preventDefault();
-        fetch('https://morning-refuge-64241.herokuapp.com/users/admin',{
+        fetch('https://cam-pavilion-server-side.vercel.app/users/admin',{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

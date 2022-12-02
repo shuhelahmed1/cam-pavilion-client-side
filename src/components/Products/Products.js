@@ -9,7 +9,7 @@ const Products = () => {
     const [pageCount, setPageCount] = useState(0);
     const size = 4;
     useEffect(()=>{
-        fetch(`https://morning-refuge-64241.herokuapp.com/products?page=${page}&&size=${size}`)
+        fetch(`https://cam-pavilion-server-side.vercel.app/products?page=${page}&&size=${size}`)
         .then(res=>res.json())
         .then(data=>{
             setProducts(data.products)
