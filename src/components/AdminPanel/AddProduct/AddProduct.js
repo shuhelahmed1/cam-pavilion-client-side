@@ -2,27 +2,24 @@ import React, { useRef, useState } from 'react';
 import './AddProduct.css';
 
 const AddProduct = () => {
-    const imgRef = useRef();
-    const nameRef = useRef();
-    const desRef = useRef();
+    const [name,setName] = useState('')
+    const [des,setDes] = useState('')
+    const [image,setImage] = useState(null)
     const [error, setError] =  useState('');
+
     const handleAddProduct = e =>{
         e.preventDefault();
-        const imgUrl = imgRef.current.value;
-        const name = nameRef.current.value;
-        const des = desRef.current.value;
-        const newProduct = {imgUrl,name,des};
-        fetch('https://cam-pavilion-server-side.vercel.app/products', {
+        const formData = new FormData()
+        formData.append('name',name)
+        formData.append('des',des)
+        formData.append('image',image)
+        fetch('http://localhost:5000/products', {
             method: 'POST',
-            headers:{
-                'content-type': 'application/json' 
-            },
-            body: JSON.stringify(newProduct)
+            body: formData
         })
         .then(res=>res.json())
-        .then(result=>{
-            alert('Successfully product added.')
-            e.target.reset();
+        .then(data=>{
+                    e.target.reset();
         })
     }
 
@@ -30,10 +27,15 @@ const AddProduct = () => {
         <div className='addProductSection my-5'>
             <h2 style={{fontWeight: 'bold'}}>Add a Product</h2>
             <form className='cam-pavilion-form' onSubmit={handleAddProduct}>
-                <input required className='d-block w-100 my-2' type="text" ref={imgRef} placeholder='Img url'/>
-                <input required className='d-block w-100' type="text" ref={nameRef} placeholder='product name'/>
-                <input required className='d-block w-100 my-2' type="text" ref={desRef} placeholder='product description'/>
+
+                <input type="file" accept='image/*' onChange={e=> setImage( e.target.files[0])}/>
+
+                <input required className='d-block w-100' type="text" onChange={e=> setName(e.target.value)} placeholder='product name'/>
+
+                <input required className='d-block w-100 my-2' type="text" onChange={e=> setDes(e.target.value)} placeholder='product description'/>
+
                 <input className='common-button' type="submit" value="Submit" />
+
                 </form>
                 <h5>{error}</h5>
         </div>

@@ -20,7 +20,7 @@ const Review = () => {
             return;
         }
         const newReview = {review, name, rating, userPhoto};
-        fetch('https://cam-pavilion-server-side.vercel.app/review',{
+        fetch('http://localhost:5000/review',{
             method: "POST",
             headers:{
                 'content-type':'application/json'
