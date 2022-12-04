@@ -11,7 +11,7 @@ const MyOrders = () => {
     const {user} = useAuth();
     const history = useHistory();
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user.email}`, {
+        fetch(`https://cam-pavilion-server-side.vercel.app/orders?email=${user.email}`, {
             headers:{
                 'authorization' : `Bearer ${localStorage.getItem('idToken')}`
             }

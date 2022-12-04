@@ -17,7 +17,7 @@ const PurchaseForm = ({purchase}) => {
         const deliveryStatus = deliveryStatusRef.current.value;
         const newOrder = {displayName,email,address,phone,deliveryStatus}
         console.log(newOrder)
-        fetch('http://localhost:5000/orders',{
+        fetch('https://cam-pavilion-server-side.vercel.app/orders',{
             method:"POST",
             headers:{
                 'content-type': 'application/json' 
