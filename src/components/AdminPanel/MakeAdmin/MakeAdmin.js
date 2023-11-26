@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const handleAdminSubmit = e =>{
         const user = {email};
         e.preventDefault();
-        fetch('https://cam-pavilion-server-side.vercel.app/users/admin',{
+        fetch('https://cam-pavilion.vercel.app/users/admin',{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

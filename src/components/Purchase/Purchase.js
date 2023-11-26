@@ -6,7 +6,7 @@ const Purchase = () => {
     const [purchase,setPurchase] = useState({});
     const {id} = useParams();
     useEffect(()=>{
-        fetch(`https://cam-pavilion-server-side.vercel.app/products/${id}`)
+        fetch(`https://cam-pavilion.vercel.app/products/${id}`)
         .then(res=>res.json())
         .then(data=>setPurchase(data))
     },[id])

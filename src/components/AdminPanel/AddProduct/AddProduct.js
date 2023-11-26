@@ -13,7 +13,7 @@ const AddProduct = () => {
         formData.append('name',name)
         formData.append('des',des)
         formData.append('image',image)
-        fetch('https://cam-pavilion-server-side.vercel.app/products', {
+        fetch('https://cam-pavilion.vercel.app/products', {
             method: 'POST',
             body: formData
         })

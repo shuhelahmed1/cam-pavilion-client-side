@@ -4,7 +4,7 @@ const MyOrder = ({order}) => {
     const [orders,setOrders] = useState([])
     const {user} = useAuth();
     useEffect(()=>{
-        fetch(`https://cam-pavilion-server-side.vercel.app/orders?email=${user.email}`, {
+        fetch(`https://cam-pavilion.vercel.app/orders?email=${user.email}`, {
             headers:{
                 'authorization' : `Bearer ${localStorage.getItem('idToken')}`
             }
@@ -17,7 +17,7 @@ const MyOrder = ({order}) => {
     const handleDeleteOrder = id =>{
         const confirm = window.confirm('Are you sure to cancel the order.');
         if(confirm){
-            const url = `https://cam-pavilion-server-side.vercel.app/orders/${id}`;
+            const url = `https://cam-pavilion.vercel.app/orders/${id}`;
         fetch(url , {
             method: 'DELETE'
         })

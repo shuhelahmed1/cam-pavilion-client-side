@@ -7,7 +7,7 @@ import { Spinner } from 'react-bootstrap';
 const Explore = () => {
     const [moreProducts, setMoreProducuts] = useState([]);
     useEffect(()=>{
-        fetch('https://cam-pavilion-server-side.vercel.app/products')
+        fetch('https://cam-pavilion.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setMoreProducuts(data.products))
     },[])

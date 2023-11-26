@@ -28,25 +28,28 @@ const useFirebase = () =>{
         setPassword(e.target.value)
     }
     const handleRegister = e =>{
-        e.preventDefault()
+       e.preventDefault()
         if(isLogin){
+
             processLogin(email,password)
         }
         else{
+
             registerNewUser(email,password)
         }
         e.target.reset();
         
     }
-    const registerNewUser = (email, password) =>{
-        
-        if(!/^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)){
-            setError('Please provide six characters, one uppercase, one number and one special character.')
-            return;
-        }
+    const registerNewUser = (email,password) =>{
+
+        // if(!/^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/.test(password)){
+        //     setError('Please provide six characters, one uppercase, one number and one special character.')
+        //     return;
+        // }
         createUserWithEmailAndPassword(auth, email,password)
-        .then((result)=>{
-            const newUser = {email, displayName: name}
+        .then((userCredential)=>{
+            const user = userCredential.user;
+            const newUser = {email, displayName: name, password}
             setUser(newUser)
             // save user to the database
             saveUser(email,name,'POST')
@@ -125,7 +128,7 @@ const useFirebase = () =>{
 
     const saveUser = (email, displayName,method) =>{
         const user = {email, displayName}
-        fetch('https://cam-pavilion-server-side.vercel.app/users',{
+        fetch('https://cam-pavilion.vercel.app/users',{
             method: method,
             headers:{
                 'content-type':'application/json'
@@ -139,7 +142,7 @@ const useFirebase = () =>{
     }
 
     useEffect(()=>{
-        fetch(`https://cam-pavilion-server-side.vercel.app/users/${user.email}`)
+        fetch(`https://cam-pavilion.vercel.app/users/${user.email}`)
         .then(res=>res.json())
         .then(data=> setAdmin(data.admin))
     },[user.email])
@@ -158,7 +161,8 @@ const useFirebase = () =>{
         handleGoogleLogIn,
         error,
         handleResetPassword,
-        name
+        name,
+        registerNewUser
     }
 }
 

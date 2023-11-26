@@ -8,7 +8,7 @@ import './ShowReviews.css';
 const ShowReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(()=>{
-        fetch('https://cam-pavilion-server-side.vercel.app/review')
+        fetch('https://cam-pavilion.vercel.app/review')
         .then(res=>res.json())
         .then(data=>setReviews(data))
     },[])
